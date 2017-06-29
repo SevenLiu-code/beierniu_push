@@ -1,0 +1,142 @@
+/*返回头部*/
+header.return_header { display: block; padding: 0 0.25rem; 
+	border-bottom: 1px solid #dbdbdb; line-height: 1.2rem;
+	background-color: #fff; align-items: center; }
+header.return_header>a { display: inline-block;width: 8%; font-size: .8rem;
+	 color: #d10310; text-align: center; vertical-align: middle;  }
+header.return_header>p { vertical-align: middle; 
+	 display: inline-block;  width: 82%; text-align: center;
+	color: #3c3c3c; font-size: 0.46rem; }
+header.return_header i.return_header_icon { display: inline-block; width: 0.8rem;
+ 	height: 0.8rem; background-size: 100%; vertical-align: -0.22rem; 
+ 	margin-right: 0.3125rem; }
+header.sale_car_header i.return_header_icon { 
+		background-image: url(../images/base/sale_car.png); }
+
+/*表单公共样式*/
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #888; opacity:1; 
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #888;opacity:1;
+}
+
+input:-ms-input-placeholder{
+    color: #888;opacity:1;
+}
+
+input::-webkit-input-placeholder{
+    color: #888;opacity:1;
+}
+
+header.custom_header i { background-image: url(../images/base/custom.png); }
+section.custom_bg { background: url(../images/banner/custom_bg.png) no-repeat;
+				background-size: 100%; }
+section.form_con { padding: 0 0.4688rem; text-align: center; }
+section.form_con h2 { margin-bottom: 0.2rem; }
+div.form_con_inner { padding: 0.4688rem; background-color: #fff; }
+div.form_row { display: flex; display: -webkit-flex; 
+	margin-bottom: 0.3125rem; position: relative; }		
+div.form_row input { display: inline-block; height: 1rem; text-indent: 0.4688rem;
+		font-size: 14px; border: 1px solid #a2a2a2; }
+div.form_row p.error_text { position: absolute; top: 0.2rem; right: 0.4688rem; }		
+[data-dpr="2"] div.form_row input, [data-dpr="2"] div.input_full textarea,
+[data-dpr="2"] div.form_row select, [data-dpr="2"] .form_box button{ font-size: 28px; }
+[data-dpr="3"] div.form_row input, [data-dpr="3"] div.input_full textarea,
+[data-dpr="3"] div.form_row select, [data-dpr="3"] .form_box button { font-size: 42px; }					
+div.input_full input, div.input_full textarea { width: 100%; font-size: 14px; 
+		border: 1px solid #a2a2a2; text-indent: 0.4688rem; line-height: 0.5625rem;
+		color: #333; } 
+div.input_full textarea { text-indent: 0; padding: 0.1562rem 0 0 0.4688rem; }		
+div.input_half { position: relative; justify-content: space-between; }
+div.input_half>i { position: absolute; right: 0.3125rem; top: 0.35rem;
+		color: #666; }
+div.input_half select { width: 47%; text-indent: 0.4688rem; font-size: 14px;
+		border: 1px solid #a2a2a2; appearance:button; color: #666;
+			-moz-appearance:button; /* Firefox */
+			-webkit-appearance:button; /* Safari 和 Chrome */ }
+div.input_half select>option { display: inline-block; width: 100%; font-size: 14px; }
+[data-dpr="2"]  div.input_half select>option { font-size: 28px; }
+[data-dpr="3"]  div.input_half select>option { font-size: 42px; }
+div.input_half input { width: 47%; }
+button.get_code { width: 47%; background-color: #d10310; color: #fff;
+		border: 1px solid #d10310; }
+p.code_error_text { position: absolute; padding-left: 0.4688rem; text-indent: 0; margin: 0; }
+button.form_commit { width: 100%; height: 1rem; color: #fff; 
+	background-color: #d10310; font-size: 16px; }
+div.form_box { background-color: #fff; }
+/*寻求合作*/
+header.coopera_header i { background-image: url(../images/base/coopera_s.png);  }
+section.coopera_bg>img { width: 100%; }
+/*提交成功*/
+div.ask_box_success { display: none; }
+div.ask_box_success>img { width: 100%; }
+div._success_desc { color: #666; }
+div.ask_box_success>p { margin-bottom: 0.1562rem; font-size: 0.4375rem; }	
+.ask_box_success div.return_link>a { line-height: .7rem; color: #d10310; margin: 0 0.1562rem; }
+/*二手车买卖*/
+ul.buy_sell_tit { overflow: hidden; margin-bottom: 0.4688rem; }
+ul.buy_sell_tit>li { width: 50%; float: left; text-align: center; }
+ul.buy_sell_tit>li>a { display: block; width: 60%; margin: auto;
+		 line-height: .8rem; color: #333; font-size: 14px; }
+ul.buy_sell_tit>li>a.current { border-bottom: 3px solid #d10310; }		 
+[data-dpr="2"] ul.buy_sell_tit>li>a { font-size: 28px; }
+[data-dpr="3"] ul.buy_sell_tit>li>a { font-size: 42px; }
+div.form_inner_con { position: relative; }
+div.form_inner_con>div { position: absolute; width: 100% }
+div.budget_price { width: 100%; text-indent: 0.4688rem; line-height: 1rem;  
+	border: 1px solid #a2a2a2; height: 1rem; font-size: 14px; color: #888;
+	text-align: left; }
+[data-dpr="2"] div.budget_price { font-size: 28px; }
+[data-dpr="3"] div.budget_price { font-size: 42px; }
+div.budget_price>i { position: absolute; right: 10%; top: 46%; 
+		border-right: 0.1562rem solid transparent; border-left: 0.1562rem solid transparent; 
+		border-top: 0.1562rem solid #222; transition: transform .5s;  }
+div.budget_price>i.rotate { transform: rotate(180deg); }		
+ul.budget_price_selet { display: none; position: absolute; top: 1rem; left: 50%; right: 1px;
+		background-color: #fff; border: 1px solid #a2a2a2; border-top: none;
+		z-index: 2; height: 5.5rem; overflow: auto; font-size: 14px; }
+[data-dpr="2"] ul.budget_price_selet { font-size: 28px; }
+[data-dpr="3"] ul.budget_price_selet { font-size: 42px; }			
+ul.budget_price_selet>li { text-align: left; text-indent: 0.4688rem;
+		color: #888; line-height: .8rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

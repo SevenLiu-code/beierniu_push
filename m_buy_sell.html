@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>寻求合作</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="format-detection" content="telephone=no" />
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" user-scalable=no> -->
+	<link rel="stylesheet" type="text/css" href="./css/m.reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/m.style.css">
+	<link rel="stylesheet" type="text/css" href="./css/m.syn.css">
+	<script type="text/javascript">
+			!function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>540&&(a=540*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=(!!y.match(/android/gi),!!y.match(/iphone/gi)),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={}));
+	</script>
+	<script type="text/javascript" src="./js/zepto.min.js"></script>
+	<script type="text/javascript" src="./js/m.runing.js"></script>
+	<script type="text/javascript" src="./js/m.touch_2.js"></script>
+</head>
+<body>
+	<header class="return_header cover_head coopera_header">
+		<a href="./m.home.html" class="return_iocn icon-angle-left"></a>
+		<p><i class="return_header_icon"></i>二手车买卖</p>
+	</header>
+	<section class="coopera_bg common_banner">
+		<img src="./images/banner/coopera.png" alt="">
+	</section>
+	<section class="coopera_con form_con">
+		<div class="coopera_inner form_con_inner">
+			<div class="buy_sell_form_con form_input_con">
+				<ul class="buy_sell_tit">
+					<li>
+						<a href="javascript:;" class="current">录入买家</a>
+					</li>
+					<li>
+						<a href="javascript:;">录入车源</a>
+					</li>
+				</ul>
+				<div class="form_inner_con">
+					<div class="form_box buy_car_form">
+						<div class="form_row input_full">
+							<input  type="text" name="userName" placeholder="请输入买家姓名">
+						</div>
+						<div class="form_row input_full">
+							<input class="phone" type="tel" name="phone" placeholder="请输入手机号码" maxlength="11">
+							<p class="error_text phone_error_text"></p>
+						</div>
+						<div class="form_row input_full">
+							<div class="budget_price" data="">
+								<span>请选择预算价格</span><i></i>
+							</div> 
+							<ul class="budget_price_selet">
+								<li data='0-5'>0-5万</li>
+								<li data='5-10'>5-10万</li>
+								<li data='10-15'>10-15万</li>
+								<li data='20-25'>20-25万</li>
+								<li data='25-30'>25-30万</li>
+								<li data='30-35'>30-35万</li>
+								<li data='35-40'>35-40万</li>
+								<li data='40-45'>40-45万</li>
+								<li data='45-50'>45-50万</li>
+								<li data='50+'>50万以上</li>
+							</ul>
+						</div>		
+						<div class="form_row commit_box">
+							<button class="coopera_commit form_commit">提交</button>
+						</div>
+					</div>
+					<div class="form_box sell_car_form">
+						<div class="form_row input_full">
+							<input  type="text" name="userName" placeholder="请输入您的姓名">
+						</div>
+						<div class="form_row input_full">
+							<input class="phone" type="tel" name="phone" placeholder="请输入您的手机号" maxlength="11">
+							<p class="error_text phone_error_text"></p>
+						</div>
+						<div class="form_row input_half">
+							<input type="text" name="provinces" placeholder="请输入投资省份">
+							<input type="text" name="city" placeholder="请输入投资城市">
+						</div>
+						<div class="form_row input_half">
+							<input type="text" name="provinces" placeholder="请输入投资省份">
+							<input type="text" name="city" placeholder="请输入投资城市">
+						</div>		
+						<div class="form_row commit_box">
+							<button class="coopera_commit form_commit">提交</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ask_box_success">
+				<img src="./images/base/ask_success.png" alt="">
+				<p>信息提交成功</p>
+				<div class="_success_desc">稍后会有专业客服与您联系，请保持电话畅通</div>
+				<div class="return_link">
+				 	<a href="javascript:;" class="return">返回</a>
+				 	<a href="./m.m.filter_brand.html">去看车</a>
+			 	</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
