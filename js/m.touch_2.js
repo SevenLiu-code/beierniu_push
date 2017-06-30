@@ -3,20 +3,22 @@
 $(function(){
 	//二手车买卖页
 	$('div.budget_price').on('touchstart' ,function(e){
-		console.log( $(this).find('i').hasClass('rotate') );
 		if( $(this).find('i').hasClass('rotate') ){
 			$(this).find('i').removeClass('rotate');
 			$(this).parent().find('.budget_price_selet').hide();
+			$(window).scrollTop(0);
 		}else{ 
-			console.log(1)
 			$(this).find('i').addClass('rotate');
+			$('ul.budget_price_selet>li').removeClass('active');
 			$(this).parent().find('ul.budget_price_selet').show();
+			$(window).scrollTop($('body').height());
 		 }
 		 if ( e.type == 'touchstart' ) e.preventDefault();
 	});
 	$('ul.budget_price_selet>li').tap(function(){
 		var text = $(this).html();
 		var data = $(this).attr('data');
+		$(this).addClass('active');
 		$('div.budget_price>span').html(text);
 		$('div.budget_price>i').removeClass('rotate');
 		$('.budget_price_selet').hide();
