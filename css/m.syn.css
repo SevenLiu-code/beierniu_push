@@ -69,7 +69,7 @@ button.form_commit { width: 100%; height: 1rem; color: #fff;
 div.form_box { background-color: #fff; }
 /*寻求合作*/
 header.coopera_header i { background-image: url(../images/base/coopera_s.png);  }
-section.coopera_bg>img { width: 100%; }
+section.buy_sell_bg>img { width: 100%; height: 4.6875rem; }
 /*提交成功*/
 div.ask_box_success { display: none; }
 div.ask_box_success>img { width: 100%; }
@@ -101,7 +101,7 @@ ul.budget_price_selet { display: none; position: absolute; top: 1rem; left: 50%;
 [data-dpr="2"] ul.budget_price_selet { font-size: 28px; }
 [data-dpr="3"] ul.budget_price_selet { font-size: 42px; }			
 ul.budget_price_selet>li { text-align: left; text-indent: 0.4688rem;
-		color: #888; line-height: .8rem;}
+		color: #888; line-height: .8rem; }
 
 
 
