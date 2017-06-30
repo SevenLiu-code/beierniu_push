@@ -40,7 +40,7 @@ div.form_con_inner { padding: 0.4688rem; background-color: #fff; }
 div.form_row { display: flex; display: -webkit-flex; 
 	margin-bottom: 0.3125rem; position: relative; }		
 div.form_row input { display: inline-block; height: 1rem; text-indent: 0.4688rem;
-		font-size: 14px; border: 1px solid #a2a2a2; }
+		font-size: 14px; border: 1px solid #a2a2a2; -webkit-appearance: none; }
 div.form_row p.error_text { position: absolute; top: 0.2rem; right: 0.4688rem; }		
 [data-dpr="2"] div.form_row input, [data-dpr="2"] div.input_full textarea,
 [data-dpr="2"] div.form_row select, [data-dpr="2"] .form_box button{ font-size: 28px; }
