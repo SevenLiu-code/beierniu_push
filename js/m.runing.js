@@ -17,7 +17,7 @@ function buySellEnvent(){
 		})
 	}
 $(function(){
-	// buySellEnvent();
+	buySellEnvent();
 	// $('#picktime').mdatetimer({
 	// 	mode : 1, //时间选择器模式： 1 ：年月日，2 ：年月日时分（ 24 小时），3 ：年月日时分（ 12 小时），4 ：年月日时分秒。默认： 1
 	// 	format : 2, //时间格式化方式： 1 ：2015 年 06月 10 日 17 时 30分 46 秒，2 ： 2015-05-10  17:30:46。默认： 2
