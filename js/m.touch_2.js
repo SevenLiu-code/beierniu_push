@@ -15,7 +15,7 @@ $(function(){
 		 }
 		 if ( e.type == 'touchstart' ) e.preventDefault();
 	});
-	$('ul.budget_price_selet>li').tap(function(){
+	$('ul.budget_price_selet>li').on('touchstart', function(){
 		var text = $(this).html();
 		var data = $(this).attr('data');
 		$(this).addClass('active');
@@ -23,6 +23,7 @@ $(function(){
 		$('div.budget_price>i').removeClass('rotate');
 		$('.budget_price_selet').hide();
 		$('div.budget_price').attr({'data': data});
+		if ( e.type == 'touchstart' ) e.preventDefault();
 	});
 	//寻求合作页表单提交
 	$('.coopera_form button.form_commit').tap(function(){
