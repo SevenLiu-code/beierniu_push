@@ -4,7 +4,6 @@ $(function(){
 	$('div.form_row>input').focus(function(){
 		if ( $('div.budget_price').find('i').hasClass('rotate') ) {
 				$('div.budget_price').find('i').removeClass('rotate');
-				$('div.budget_price').removeClass('_selet_show');//右下角补上圆角
 				$('div.budget_price').parent().find('.budget_price_selet').hide();
 				$(window).scrollTop(0);
 			}
@@ -13,15 +12,14 @@ $(function(){
 	$('div.budget_price').on('touchstart' ,function(e){
 		if( $(this).find('i').hasClass('rotate') ){
 			$(this).find('i').removeClass('rotate');
-			$(this).removeClass('_selet_show');//右下角去除圆角
-			$(this).parent().find('.budget_price_selet').hide();
+			$('div.mask').hide();//遮罩层隐藏
+			$('.budget_price_selet').css({"display": "none"});
 			$(window).scrollTop(0);
 		}else{ 
 			$(this).find('i').addClass('rotate');
-			$(this).addClass('_selet_show');//右下角补上圆角
 			$('div.form_row>input').blur();//所有input失去焦点
-			$('ul.budget_price_selet>li').removeClass('active');
-			$(this).parent().find('ul.budget_price_selet').show();
+			$('div.mask').show();//遮罩层打开
+			$('.budget_price_selet').css({"display": "block"});
 			$(window).scrollTop($('body').height());
 		 }
 		 if ( e.type == 'touchstart' ) e.preventDefault();
@@ -29,11 +27,12 @@ $(function(){
 	$('ul.budget_price_selet>li').on('touchstart', function(e){
 		var text = $(this).html();
 		var data = $(this).attr('data');
+		$('ul.budget_price_selet>li').removeClass('active');
 		$(this).addClass('active');
-		$('div.budget_price').removeClass('_selet_show');//右下角补上圆角
+		$('div.mask').hide();//遮罩层隐藏
 		$('div.budget_price>span').html(text);
 		$('div.budget_price>i').removeClass('rotate');
-		$('.budget_price_selet').hide();
+		$('.budget_price_selet').css({"display": "none"});
 		$('div.budget_price').attr({'data': data});
 		if ( e.type == 'touchstart' ) e.preventDefault();
 	});

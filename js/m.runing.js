@@ -1,7 +1,7 @@
 
 function buySellEnvent(){
 		var h = 0;
-		$('div.form_inner_con div.form_box').hide().eq(0).show();
+		$('div.form_inner_con div.form_box').css({"display": "none"}).eq(0).css({"display": "block"});
 		h = $('div.form_inner_con div.form_box').eq(0).height();
 		$('div.form_inner_con').height(h);
 		$('ul.buy_sell_tit>li>a').mouseover(function(){
@@ -10,7 +10,7 @@ function buySellEnvent(){
 				}else {
 					$(this).parents('ul.buy_sell_tit').find('a.current').removeClass('current');
 					$(this).addClass('current');
-					$('div.form_inner_con div.form_box').hide().eq($(this).parent().index()).show();
+					$('div.form_inner_con div.form_box').css({"display": "none"}).eq($(this).parent().index()).css({"display": "block"});
 					 h = $('.car_list_con').eq($(this).parent().index()).height();
 					$('div.form_inner_con').height(h);
 				}
