@@ -18,13 +18,12 @@ function buySellEnvent(){
 	}
 $(function(){
 	buySellEnvent();
-	// $('#picktime').mdatetimer({
-	// 	mode : 1, //时间选择器模式： 1 ：年月日，2 ：年月日时分（ 24 小时），3 ：年月日时分（ 12 小时），4 ：年月日时分秒。默认： 1
-	// 	format : 2, //时间格式化方式： 1 ：2015 年 06月 10 日 17 时 30分 46 秒，2 ： 2015-05-10  17:30:46。默认： 2
-	// 	years : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017], // 年份数组
-	// 	nowbtn : false, //是否显示现在按钮
-	// 	onOk : null,  //点击确定时添加额外的执行函数 默认null
-	// 	onCancel : null, //点击取消时添加额外的执行函数 默认null
-	// })
+	var calendar = new LCalendar();
+    calendar.init({
+        'trigger': '#picktime', //标签id
+        'type': 'ym', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+        'minDate': '1980-1', //最小日期
+        'maxDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 1)
+    });
 })
 

@@ -97,7 +97,7 @@ div.fake_input>i { position: absolute; right: 10%; top: 46%;
 		border-right: 0.1562rem solid transparent; border-left: 0.1562rem solid transparent; 
 		border-top: 0.1562rem solid #222; transition: transform .5s;  }
 div.fake_input>i.rotate { transform: rotate(180deg); }		
-ul.budget_price_selet { display: none; position: absolute; top: 1rem; left: 44%; right: 0;
+ul.budget_price_selet { display: none; position: absolute; top: 1rem; left: 46%; right: 0;
 		background-color: #fff; border: 1px solid #a2a2a2; border-top: none;
 		z-index: 2; height: auto; overflow: auto; font-size: 14px; }
 ul.budget_price_selet>li.active { color: #d10310; }		
