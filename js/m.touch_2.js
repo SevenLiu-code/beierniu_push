@@ -2,10 +2,12 @@
 
 $(function(){
 	$('div.form_row>input').focus(function(){
-		$('div.budget_price').find('i').removeClass('rotate');
-			$('div.budget_price').removeClass('_selet_show');//右下角补上圆角
-			$('div.budget_price').parent().find('.budget_price_selet').hide();
-			$(window).scrollTop(0);
+		if ( $('div.budget_price').find('i').hasClass('rotate') ) {
+				$('div.budget_price').find('i').removeClass('rotate');
+				$('div.budget_price').removeClass('_selet_show');//右下角补上圆角
+				$('div.budget_price').parent().find('.budget_price_selet').hide();
+				$(window).scrollTop(0);
+			}
 		});
 	//二手车买卖页
 	$('div.budget_price').on('touchstart' ,function(e){
