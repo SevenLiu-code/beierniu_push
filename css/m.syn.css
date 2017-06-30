@@ -90,6 +90,7 @@ div.form_inner_con>div { position: absolute; width: 100% }
 div.budget_price { width: 100%; text-indent: 0.4688rem; line-height: 1rem;  
 	border: 1px solid #a2a2a2; height: 1rem; font-size: 14px; color: #888;
 	text-align: left; border-radius: 0.125rem; }
+div.budget_price._selet_show { border-bottom-right-radius: 0; }	
 [data-dpr="2"] div.budget_price { font-size: 28px; }
 [data-dpr="3"] div.budget_price { font-size: 42px; }
 div.budget_price>i { position: absolute; right: 10%; top: 46%; 

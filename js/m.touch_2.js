@@ -10,10 +10,12 @@ $(function(){
 	$('div.budget_price').on('touchstart' ,function(e){
 		if( $(this).find('i').hasClass('rotate') ){
 			$(this).find('i').removeClass('rotate');
+			$(this).removeClass('_selet_show');
 			$(this).parent().find('.budget_price_selet').hide();
 			$(window).scrollTop(0);
 		}else{ 
 			$(this).find('i').addClass('rotate');
+			$(this).addClass('_selet_show');
 			$('div.form_row>input').blur();//所有input失去焦点
 			$('ul.budget_price_selet>li').removeClass('active');
 			$(this).parent().find('ul.budget_price_selet').show();
