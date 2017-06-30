@@ -15,7 +15,7 @@ $(function(){
 		 }
 		 if ( e.type == 'touchstart' ) e.preventDefault();
 	});
-	$('ul.budget_price_selet>li').on('touchstart', function(){
+	$('ul.budget_price_selet>li').on('touchstart', function(e){
 		var text = $(this).html();
 		var data = $(this).attr('data');
 		$(this).addClass('active');
