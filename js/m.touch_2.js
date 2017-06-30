@@ -1,6 +1,11 @@
 
 
 $(function(){
+	$('div.form_row>input').focus(function(){
+		$('div.budget_price').find('i').removeClass('rotate');
+			$('div.budget_price').parent().find('.budget_price_selet').hide();
+			$(window).scrollTop(0);
+		});
 	//二手车买卖页
 	$('div.budget_price').on('touchstart' ,function(e){
 		if( $(this).find('i').hasClass('rotate') ){

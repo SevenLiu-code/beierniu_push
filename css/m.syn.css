@@ -37,10 +37,11 @@ section.custom_bg { background: url(../images/banner/custom_bg.png) no-repeat;
 section.form_con { padding: 0 0.4688rem; text-align: center; }
 section.form_con h2 { margin-bottom: 0.2rem; }
 div.form_con_inner { padding: 0.4688rem; background-color: #fff; }
-div.form_row { display: flex; display: -webkit-flex; 
+div.form_row { display: flex; display: -webkit-flex; border-radius: 0.125rem;
 	margin-bottom: 0.3125rem; position: relative; }		
 div.form_row input { display: inline-block; height: 1rem; text-indent: 0.4688rem;
-		font-size: 14px; border: 1px solid #a2a2a2; -webkit-appearance: none; }
+		font-size: 14px; border: 1px solid #a2a2a2; -webkit-appearance: none; 
+	    border-radius: 0.125rem;}
 div.form_row p.error_text { position: absolute; top: 0.2rem; right: 0.4688rem; }		
 [data-dpr="2"] div.form_row input, [data-dpr="2"] div.input_full textarea,
 [data-dpr="2"] div.form_row select, [data-dpr="2"] .form_box button{ font-size: 28px; }
@@ -88,7 +89,7 @@ div.form_inner_con { position: relative; }
 div.form_inner_con>div { position: absolute; width: 100% }
 div.budget_price { width: 100%; text-indent: 0.4688rem; line-height: 1rem;  
 	border: 1px solid #a2a2a2; height: 1rem; font-size: 14px; color: #888;
-	text-align: left; }
+	text-align: left; border-radius: 0.125rem; }
 [data-dpr="2"] div.budget_price { font-size: 28px; }
 [data-dpr="3"] div.budget_price { font-size: 42px; }
 div.budget_price>i { position: absolute; right: 10%; top: 46%; 
@@ -102,7 +103,7 @@ ul.budget_price_selet>li.active { color: #d10310; }
 [data-dpr="2"] ul.budget_price_selet { font-size: 28px; }
 [data-dpr="3"] ul.budget_price_selet { font-size: 42px; }			
 ul.budget_price_selet>li { text-align: left; text-indent: 0.4688rem;
-		color: #888; line-height: .8rem; }
+	color: #888; line-height: .8rem; }
 
 
 
