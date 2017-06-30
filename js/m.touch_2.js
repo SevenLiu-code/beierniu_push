@@ -14,6 +14,7 @@ $(function(){
 			$(window).scrollTop(0);
 		}else{ 
 			$(this).find('i').addClass('rotate');
+			$('div.form_row>input').blur();//所有input失去焦点
 			$('ul.budget_price_selet>li').removeClass('active');
 			$(this).parent().find('ul.budget_price_selet').show();
 			$(window).scrollTop($('body').height());
