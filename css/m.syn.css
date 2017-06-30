@@ -54,10 +54,7 @@ div.input_full textarea { text-indent: 0; padding: 0.1562rem 0 0 0.4688rem; }
 div.input_half { position: relative; justify-content: space-between; }
 div.input_half>i { position: absolute; right: 0.3125rem; top: 0.35rem;
 		color: #666; }
-div.input_half select { width: 47%; text-indent: 0.4688rem; font-size: 14px;
-		border: 1px solid #a2a2a2; appearance:button; color: #666;
-			-moz-appearance:button; /* Firefox */
-			-webkit-appearance:button; /* Safari 和 Chrome */ }
+
 div.input_half select>option { display: inline-block; width: 100%; font-size: 14px; }
 [data-dpr="2"]  div.input_half select>option { font-size: 28px; }
 [data-dpr="3"]  div.input_half select>option { font-size: 42px; }
@@ -87,7 +84,9 @@ ul.buy_sell_tit>li>a.current { border-bottom: 3px solid #d10310; }
 [data-dpr="3"] ul.buy_sell_tit>li>a { font-size: 42px; }
 div.form_inner_con { position: relative; }
 div.form_inner_con>div { position: absolute; width: 100% }
-div.fake_input { width: 100%; text-indent: 0.4688rem; line-height: 1rem;  
+
+/*自定义下拉框*/
+/*div.fake_input { width: 100%; text-indent: 0.4688rem; line-height: 1rem;  
 	border: 1px solid #a2a2a2; height: 1rem; font-size: 14px; color: #888;
 	text-align: left; border-radius: 0.125rem; }
 div.budget_price._selet_show { border-bottom-right-radius: 0; }	
@@ -104,8 +103,17 @@ ul.budget_price_selet>li.active { color: #d10310; }
 [data-dpr="2"] ul.budget_price_selet { font-size: 28px; }
 [data-dpr="3"] ul.budget_price_selet { font-size: 42px; }			
 ul.budget_price_selet>li { text-align: left; text-indent: 0.4688rem;
-	color: #888; line-height: .8rem; }
+	color: #888; line-height: .8rem; } */
 
+/*select下拉框*/
+i.price_icon { position: absolute; right: 10%; top: 46%; 
+		border-right: 0.1562rem solid transparent; border-left: 0.1562rem solid transparent; 
+		border-top: 0.1562rem solid #222; transition: transform .5s;  }
+div.input_full select { width: 100%; text-indent: 0.4688rem; line-height: 1rem;  
+	border: 1px solid #a2a2a2; height: 1rem; font-size: 14px; color: #888;
+	text-align: left; border-radius: 0.125rem;
+	-moz-appearance:button; /* Firefox */
+	-webkit-appearance:button; /* Safari 和 Chrome */ }
 
 
 
