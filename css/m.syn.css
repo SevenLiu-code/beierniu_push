@@ -87,16 +87,16 @@ ul.buy_sell_tit>li>a.current { border-bottom: 3px solid #d10310; }
 [data-dpr="3"] ul.buy_sell_tit>li>a { font-size: 42px; }
 div.form_inner_con { position: relative; }
 div.form_inner_con>div { position: absolute; width: 100% }
-div.budget_price { width: 100%; text-indent: 0.4688rem; line-height: 1rem;  
+div.fake_input { width: 100%; text-indent: 0.4688rem; line-height: 1rem;  
 	border: 1px solid #a2a2a2; height: 1rem; font-size: 14px; color: #888;
 	text-align: left; border-radius: 0.125rem; }
 div.budget_price._selet_show { border-bottom-right-radius: 0; }	
-[data-dpr="2"] div.budget_price { font-size: 28px; }
-[data-dpr="3"] div.budget_price { font-size: 42px; }
-div.budget_price>i { position: absolute; right: 10%; top: 46%; 
+[data-dpr="2"] div.fake_input { font-size: 28px; }
+[data-dpr="3"] div.fake_input { font-size: 42px; }
+div.fake_input>i { position: absolute; right: 10%; top: 46%; 
 		border-right: 0.1562rem solid transparent; border-left: 0.1562rem solid transparent; 
 		border-top: 0.1562rem solid #222; transition: transform .5s;  }
-div.budget_price>i.rotate { transform: rotate(180deg); }		
+div.fake_input>i.rotate { transform: rotate(180deg); }		
 ul.budget_price_selet { display: none; position: absolute; top: 1rem; left: 50%; right: 0;
 		background-color: #fff; border: 1px solid #a2a2a2; border-top: none;
 		z-index: 2; height: auto; overflow: auto; font-size: 14px; }
