@@ -3,6 +3,7 @@
 $(function(){
 	$('div.form_row>input').focus(function(){
 		$('div.budget_price').find('i').removeClass('rotate');
+			$('div.budget_price').removeClass('_selet_show');
 			$('div.budget_price').parent().find('.budget_price_selet').hide();
 			$(window).scrollTop(0);
 		});
