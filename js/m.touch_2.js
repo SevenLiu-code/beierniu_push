@@ -3,7 +3,7 @@
 $(function(){
 	$('div.form_row>input').focus(function(){
 		$('div.budget_price').find('i').removeClass('rotate');
-			$('div.budget_price').removeClass('_selet_show');
+			$('div.budget_price').removeClass('_selet_show');//右下角补上圆角
 			$('div.budget_price').parent().find('.budget_price_selet').hide();
 			$(window).scrollTop(0);
 		});
@@ -11,12 +11,12 @@ $(function(){
 	$('div.budget_price').on('touchstart' ,function(e){
 		if( $(this).find('i').hasClass('rotate') ){
 			$(this).find('i').removeClass('rotate');
-			$(this).removeClass('_selet_show');
+			$(this).removeClass('_selet_show');//右下角去除圆角
 			$(this).parent().find('.budget_price_selet').hide();
 			$(window).scrollTop(0);
 		}else{ 
 			$(this).find('i').addClass('rotate');
-			$(this).addClass('_selet_show');
+			$(this).addClass('_selet_show');//右下角补上圆角
 			$('div.form_row>input').blur();//所有input失去焦点
 			$('ul.budget_price_selet>li').removeClass('active');
 			$(this).parent().find('ul.budget_price_selet').show();
@@ -28,6 +28,7 @@ $(function(){
 		var text = $(this).html();
 		var data = $(this).attr('data');
 		$(this).addClass('active');
+		$('div.budget_price').removeClass('_selet_show');//右下角补上圆角
 		$('div.budget_price>span').html(text);
 		$('div.budget_price>i').removeClass('rotate');
 		$('.budget_price_selet').hide();
