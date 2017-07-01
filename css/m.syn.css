@@ -113,7 +113,8 @@ ul.budget_price_selet>li.active>i{  border: 0.12rem solid #d10310; background-co
 /*默认下拉框*/
 select.budget_price_select { position: absolute; right: 0; left: 0; top: 0; bottom: 0; 
 	width: 100%; text-indent: 0.4688rem; color: #888; visibility: hidden; 
-	appearance: button; -moz-appearance: button; -webkit-appearance: button; }
+	appearance: button; -moz-appearance: button; -webkit-appearance: button;
+	background-color: #fff; }
 
 
 
