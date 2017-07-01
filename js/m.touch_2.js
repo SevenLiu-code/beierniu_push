@@ -27,6 +27,7 @@ $(function(){
 	// });
 	
 	$('div.budget_price, div.budget_price>i').on('touchstart', function(e){
+		$('div.budget_price>span').html('');
 		$('select.budget_price_select').css({'display':'block'});
 		$('i.select_triangle').css({'display':'block'});
 		$('select.budget_price_select').trigger('click');
