@@ -26,7 +26,7 @@ $(function(){
 	// 	 if ( e.type == 'touchstart' ) e.preventDefault();
 	// });
 	
-	$('div.budget_price, div.budget_price>i').tap(function(e){
+	$('div.budget_price, div.budget_price>i').on('touchend', function(e){
 		$('div.budget_price>span').html('');//清空模拟placeholder
 		$('select.budget_price_select').css({'display':'block'});
 		$('i.select_triangle').css({'display':'block'});
