@@ -93,7 +93,7 @@ div.fake_input { width: 100%; text-indent: 0.4688rem; line-height: 1rem;
 	text-align: left; border-radius: 0.125rem; }
 [data-dpr="2"] div.fake_input { font-size: 28px; }
 [data-dpr="3"] div.fake_input { font-size: 42px; }
-div.fake_input>i { position: absolute; right: 10%; top: 46%; 
+i.price_triangle { position: absolute; right: 10%; top: 46%; 
 		border-right: 0.1562rem solid transparent; border-left: 0.1562rem solid transparent; 
 		border-top: 0.1562rem solid #222;  }		
 ul.budget_price_selet { display: none; position: fixed; top: 50%; left: 8%; right: 8%;
@@ -108,13 +108,14 @@ ul.budget_price_selet>li>i { display: inline-block;
 			width: 0.38rem; height: 0.38rem;
 			margin: 0 0.3rem; border-radius: 50%; border: 1px solid #a2a2a2; 
 			vertical-align: -0.085rem;  }
-ul.budget_price_selet>li.active>i{  border: 0.12rem solid #d10310; background-color: #fff; }
+ul.budget_price_selet>li.active>i{ border: 0.12rem solid #d10310; background-color: #fff; }
 
 /*默认下拉框*/
+div.budget_price { border-radius: 0.125rem; }
 select.budget_price_select { position: absolute; right: 0; left: 0; top: 0; bottom: 0; 
-	width: 100%; text-indent: 0.4688rem; color: #888; visibility: hidden; 
+	width: 100%; text-indent: 0.4688rem; color: #888;  
 	appearance: button; -moz-appearance: button; -webkit-appearance: button;
-	background-color: #fff; }
+	background-color: #fff; border-radius: 0.125rem; display: none; }
 
 
 

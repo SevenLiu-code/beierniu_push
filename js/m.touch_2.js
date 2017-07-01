@@ -26,11 +26,13 @@ $(function(){
 	// 	 if ( e.type == 'touchstart' ) e.preventDefault();
 	// });
 	
-	$('div.budget_price').on('touchstart' ,function(e){
-		if ( e.type == 'touchstart' ) e.preventDefault();
-		$('select.budget_price_select').css({'visibility': 'visible'});
+	$('div.budget_price, div.budget_price>i').on('touchstart', function(e){
+		$('select.budget_price_select').css({'display':'block'});
+		$('select.budget_price_select').trigger('click');
 	});
-
+	$('i.select_triangle').on('touchstart', function(e){
+		$('select.budget_price_select').trigger('click');
+	});
 	$('ul.budget_price_selet>li').on('touchstart', function(e){
 		var text = $(this).html();
 		var data = $(this).attr('data');
