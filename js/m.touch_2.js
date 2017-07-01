@@ -1,29 +1,36 @@
 
 
 $(function(){
-	$('div.form_row>input').focus(function(){
-		if ( $('div.budget_price').find('i').hasClass('rotate') ) {
-				$('div.budget_price').find('i').removeClass('rotate');
-				$('div.budget_price').parent().find('.budget_price_selet').hide();
-				$(window).scrollTop(0);
-			}
-		});
+	// $('div.form_row>input').focus(function(){
+	// 	if ( $('div.budget_price').find('i').hasClass('rotate') ) {
+	// 			$('div.budget_price').find('i').removeClass('rotate');
+	// 			$('div.budget_price').parent().find('.budget_price_selet').hide();
+	// 			$(window).scrollTop(0);
+	// 		}
+	// 	});
+	
 	//二手车买卖页
+	// $('div.budget_price').on('touchstart' ,function(e){
+	// 	if( $(this).find('i').hasClass('rotate') ){
+	// 		$(this).find('i').removeClass('rotate');
+	// 		$('div.mask').hide();//遮罩层隐藏
+	// 		$('.budget_price_selet').css({"display": "none"});
+	// 		$(window).scrollTop(0);
+	// 	}else{ 
+	// 		$(this).find('i').addClass('rotate');
+	// 		$('div.form_row>input').blur();//所有input失去焦点
+	// 		$('div.mask').show();//遮罩层打开
+	// 		$('.budget_price_selet').css({"display": "block"});
+	// 		$(window).scrollTop($('body').height());
+	// 	 }
+	// 	 if ( e.type == 'touchstart' ) e.preventDefault();
+	// });
+	
 	$('div.budget_price').on('touchstart' ,function(e){
-		if( $(this).find('i').hasClass('rotate') ){
-			$(this).find('i').removeClass('rotate');
-			$('div.mask').hide();//遮罩层隐藏
-			$('.budget_price_selet').css({"display": "none"});
-			$(window).scrollTop(0);
-		}else{ 
-			$(this).find('i').addClass('rotate');
-			$('div.form_row>input').blur();//所有input失去焦点
-			$('div.mask').show();//遮罩层打开
-			$('.budget_price_selet').css({"display": "block"});
-			$(window).scrollTop($('body').height());
-		 }
-		 if ( e.type == 'touchstart' ) e.preventDefault();
+		if ( e.type == 'touchstart' ) e.preventDefault();
+		$('select.budget_price_select').css({'visibility': 'visible'});
 	});
+
 	$('ul.budget_price_selet>li').on('touchstart', function(e){
 		var text = $(this).html();
 		var data = $(this).attr('data');

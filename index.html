@@ -50,9 +50,22 @@
 						<div class="form_row input_full box_s">
 							<div class="budget_price fake_input" data="none">
 								<span>请选择预算价格</span><i></i>
-							</div> 	
-							<div class="mask"></div>
-							<ul class="budget_price_selet box_s">
+							</div> 
+							<select class="budget_price_select" name="budget_price" id="">
+								<option value="0-5">0-5万</option>
+								<option value="5-10">5-10万</option>
+								<option value="10-15">10-15万</option>
+								<option value="15-20">15-20万</option>
+								<option value="20-25">20-25万</option>
+								<option value="25-30">25-30万</option>
+								<option value="30-35">30-35万</option>
+								<option value="35-40">35-40万</option>
+								<option value="40-45">40-45万</option>
+								<option value="45-50">45-50万</option>
+								<option value="50+">50万以上</option>
+							</select>	
+							<!-- <div class="mask"></div> -->
+							<!-- <ul class="budget_price_selet box_s">
 								<li data='0-5'>
 									<i class="box_s"><span class="inner_round"></span></i>0-5万
 								</li>
@@ -82,7 +95,7 @@
 								<li data='50+'>
 									<i class="box_s"><span class="inner_round"></span></i>50万以上
 								</li>
-							</ul>							
+							</ul> -->							
 						</div>	
 						<div class="form_row commit_box">
 							<button class="coopera_commit form_commit">提交</button>

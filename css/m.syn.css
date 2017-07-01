@@ -38,7 +38,7 @@ section.form_con { padding: 0 0.4688rem; text-align: center; }
 section.form_con h2 { margin-bottom: 0.2rem; }
 div.form_con_inner { padding: 0.4688rem; background-color: #fff; }
 div.form_row { display: flex; display: -webkit-flex; border-radius: 0.125rem;
-	margin-bottom: 0.3125rem; position: relative; }		
+	margin-bottom: 0.3125rem; position: relative; width: 100%; }		
 div.form_row input { display: inline-block; height: 1rem; text-indent: 0.4688rem;
 		font-size: 14px; border: 1px solid #a2a2a2; -webkit-appearance: none; 
 	    border-radius: 0.125rem;}
@@ -110,8 +110,10 @@ ul.budget_price_selet>li>i { display: inline-block;
 			vertical-align: -0.085rem;  }
 ul.budget_price_selet>li.active>i{  border: 0.12rem solid #d10310; background-color: #fff; }
 
-
-
+/*默认下拉框*/
+select.budget_price_select { position: absolute; right: 0; left: 0; top: 0; bottom: 0; 
+	width: 100%; text-indent: 0.4688rem; color: #888; visibility: hidden; 
+	appearance: button; -moz-appearance: button; -webkit-appearance: button; }
 
 
 
