@@ -95,17 +95,47 @@ div.fake_input { width: 100%; text-indent: 0.4688rem; line-height: 1rem;
 	text-align: left; border-radius: 0.125rem; }
 [data-dpr="2"] div.fake_input { font-size: 28px; }
 [data-dpr="3"] div.fake_input { font-size: 42px; }
-i.price_triangle { position: absolute; right: 10%; top: 46%; 
+i.triangle_iocn { position: absolute; right: 10%; top: 46%; 
 		border-right: 0.1562rem solid transparent; border-left: 0.1562rem solid transparent; 
 		border-top: 0.1562rem solid #222; }			
 div.budget_price { border-radius: 0.125rem; }
 select.budget_price_select { position: absolute; right: 0; left: 0; top: 0; bottom: 0; 
 	width: 100%; text-indent: 0.4688rem; color: #888; color: #888; border: none;
 	appearance: button; -moz-appearance: button; -webkit-appearance: button;
-	background-color: transparent; border-radius: 0.125rem; outline: none; }
+	background-color: transparent; border-radius: 0.125rem; outline: none;
+	font-size: 14px; }
+select>option { font-size: 14px; }	
+/*[data-dpr="2"]	select>option { font-size: 28px; }	
+[data-dpr="3"] select>option { font-size: 42px; }*/	
 select.budget_price_select.change{ color: #333; }		
-i.select_triangle { display: none; }
 
+/*选择品牌*/
+section.car_brank, section.brank_set {
+	overflow: auto; display: none; background-color: #fff; }
+/*热门品牌*/
+div.home_menu { padding-top: 0.5625rem; }
+ul.h_menu_main { display: -webkit-flex; /* Safari */ display: flex; }
+ul.h_menu_main>li.h_menu_item { width: 25%; text-align: center; margin-bottom: 0.4688rem; }
+li.h_menu_item>a { color: #495056; font-size: 14px; line-height: 26px; }
+[data-dpr="2"] li.h_menu_item>a { font-size: 28px; line-height: 52px; }
+[data-dpr="3"] li.h_menu_item>a { font-size: 50px; line-height: 78px; }
+ul.h_menu_brand { display: block; overflow: hidden; margin-bottom: 0.1562rem; 
+		}
+ul.h_menu_brand li.h_menu_item { float: left; margin: 0.2rem 0; }
+ul.h_menu_brand li.h_menu_item>a { display: block;  }
+ul.h_menu_brand li.h_menu_item>a>i { display: block; width: 0.9375rem; height: 0.9375rem;  
+	background-repeat: no-repeat; background-size: 0.9375rem 0.9375rem;
+    -webkit-background-size: 0.9375rem 0.9375rem; margin: 0 auto; }    
+li.h_menu_item>a.dazhong>i { background-image: url(../images/brand/dazhong.png); }
+li.h_menu_item>a.buick>i { background-image: url(../images/brand/buick.png); }
+li.h_menu_item>a.richan>i { background-image: url(../images/brand/richan.png); }
+li.h_menu_item>a.bmw>i { background-image: url(../images/brand/bmw.png); }
+li.h_menu_item>a.xfl>i { background-image: url(../images/brand/xfl.png); }
+li.h_menu_item>a.ford>i { background-image: url(../images/brand/ford.png); }
+li.h_menu_item>a.benz>i { background-image: url(../images/brand/benz.png); }
+li.h_menu_item>a.honda>i { background-image: url(../images/brand/honda.png); }
+
+/*品牌子系列*/
 
 
 

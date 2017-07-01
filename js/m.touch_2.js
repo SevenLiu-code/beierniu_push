@@ -64,4 +64,16 @@ $(function(){
 		$('.form_con_inner .form_input_con').show();
 		$('.form_con_inner .ask_box_success').hide();
 	})
+	//选择品牌
+	$('div.brank_select').on('touchstart', function(e){
+		$('.hidden_part').css({'display':'none'});
+		$('section.car_brank').css({'display':'block'});
+		if ( e.type == 'touchstart' ) e.preventDefault();
+	})
+	$('section.car_brank>.filter_head>a').on('touchstart', function(e){
+		$('section.car_brank').css({'display':'none'});
+		$('.hidden_part').css({'display':'block'});
+		if ( e.type == 'touchstart' ) e.preventDefault();
+	})
+
 })

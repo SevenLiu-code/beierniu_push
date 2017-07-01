@@ -1,4 +1,15 @@
-
+// 字母定位函数
+function brank_letter() {
+		var $aside_letter = $('aside.aside_letter');
+		if ($aside_letter.length>0) {
+				$('aside.aside_letter li.letter_item').on('touchstart', function(e){
+					var $letter_item_index = $(this).index();//当前字母的序号，与dl列表对应
+					var dl_offsetTop = $('dl.filter_details_kind').eq($letter_item_index).offset().top;
+					$(window).scrollTop(dl_offsetTop); //滚动条高度设置为对应dl列表距文档顶部高度
+					if (e.type == 'touchstart') e.preventDefault();
+				})
+			}else{ return; }
+		} 
 function buySellEnvent(){
 		var h = 0;
 		$('div.form_inner_con div.form_box').css({"display": "none"}).eq(0).css({"display": "block"});
@@ -18,6 +29,7 @@ function buySellEnvent(){
 	}
 $(function(){
 	buySellEnvent();
+	brank_letter();
 	var calendar = new LCalendar();
     calendar.init({
         'trigger': '#picktime', //标签id
@@ -25,5 +37,6 @@ $(function(){
         'minDate': '1980-1', //最小日期
         'maxDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 1)
     });
+
 })
 

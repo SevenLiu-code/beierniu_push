@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="./css/m.reset.css">
 	<link rel="stylesheet" type="text/css" href="./css/m.style.css">
 	<link rel="stylesheet" type="text/css" href="./css/m.syn.css">
+	<link rel="stylesheet" type="text/css" href="./css/m.filter_car.css">
 	<link rel="stylesheet" type="text/css" href="./css/LCalendar.min.css">
 	<script type="text/javascript">
 			!function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>540&&(a=540*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=(!!y.match(/android/gi),!!y.match(/iphone/gi)),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={}));
@@ -20,14 +21,14 @@
 	<script type="text/javascript" src="./js/LCalendar.min.js"></script>
 </head>
 <body>
-	<header class="return_header cover_head coopera_header">
+	<header class="return_header cover_head coopera_header hidden_part">
 		<a href="./m.home.html" class="return_iocn icon-angle-left"></a>
 		<p><i class="return_header_icon"></i>二手车买卖</p>
 	</header>
-	<section class="buy_sell_bg common_banner">
+	<section class="buy_sell_bg common_banner hidden_part">
 		<img src="./images/banner/coopera.jpg" alt="">
 	</section>
-	<section class="coopera_con form_con">
+	<section class="coopera_con form_con hidden_part">
 		<div class="coopera_inner form_con_inner">
 			<div class="buy_sell_form_con form_input_con">
 				<ul class="buy_sell_tit">
@@ -51,7 +52,6 @@
 						</div>
 						<div class="form_row input_full box_s">
 							<div class="budget_price fake_input" data="none">
-								<!-- <span>请选择预算价格</span> --><i class="price_triangle triangle_iocn"></i>
 								<i class="must_icon"></i>
 							</div> 
 							<i class="triangle_iocn select_triangle"></i>
@@ -115,7 +115,190 @@
 		</div>
 	</section>
 	<section class="car_brank">
-
+		<div class="filter_head cover_head">
+			<a href="javascript:void(0);" class="icon-angle-left"></a>
+			<p>选择品牌</p>
+		</div>
+		<div class="filter_brand">
+			<dl class="filter_details_kind filter_details_brand">
+	            <dt class="filter_details_tit hot_brand_tit">热门品牌</dt>
+	            <dd>
+	                <ul class="h_menu_brand h_menu_main">
+	                    <li class="h_menu_item">
+	                        <a href="javascript:void(0);" class="dazhong">
+	                            <i></i>大众
+	                        </a>
+	                    </li>
+	                    <li class="h_menu_item">
+	                        <a href="javascript:void(0);" class="buick">
+	                            <i></i>别克
+	                        </a>
+	                    </li>
+	                    <li class="h_menu_item">
+	                        <a href="javascript:void(0);" class="richan">
+	                            <i></i>日产
+	                        </a>
+	                    </li>
+	                    <li class="h_menu_item">
+	                        <a href="javascript:void(0);" class="honda">
+	                            <i></i>本田
+	                        </a>
+	                    </li>
+	                    <li class="h_menu_item">
+	                        <a href="javascript:void(0);" class="xfl">
+	                            <i></i>雪佛兰
+	                        </a>
+	                    </li>
+	                    <li class="h_menu_item">
+	                        <a href="javascript:void(0);" class="bmw">
+	                            <i></i>宝马
+	                        </a>
+	                    </li>
+	                    <li class="h_menu_item">
+	                        <a href="javascript:void(0);" class="benz">
+	                            <i></i>奔驰
+	                        </a>
+	                    </li>
+	                    <li class="h_menu_item">
+	                        <a href="javascript:void(0);" class="ford">
+	                            <i></i>福特
+	                        </a>
+	                    </li>
+	                </ul>
+	            </dd>
+	        </dl>
+	        <dl class="filter_details_kind filter_details_brand">
+	            <dt class="filter_details_tit">*</dt>
+	            <dd class="brand_details_dd">
+	                <a href="javascript:void(0);">不限品牌</a>
+	            </dd>
+       	 	</dl>
+       	 	<dl class="filter_details_kind filter_details_brand">
+                <dt class="filter_details_tit" data-index="A">A</dt>
+                <dd class="brand_details_dd">
+                    <ul>
+                         <li class="brand_details_item">
+                            <a href="javascript:void(0);">阿尔法·罗密欧</a>
+                         </li>
+                         <li class="brand_details_item">
+                          	<a href="javascript:void(0);">阿斯顿·马丁</a>
+                         </li>
+                           <li class="brand_details_item">
+                           <a href="javascript:void(0);">安凯客车</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪</a>
+                         </li> 
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="filter_details_kind filter_details_brand">
+                <dt class="filter_details_tit" data-index="A">B</dt>
+                <dd class="brand_details_dd">
+                    <ul>
+                         <li class="brand_details_item">
+                            <a href="javascript:void(0);">阿尔法·罗密欧</a>
+                         </li>
+                         <li class="brand_details_item">
+                          	<a href="javascript:void(0);">阿斯顿·马丁</a>
+                         </li>
+                           <li class="brand_details_item">
+                           <a href="javascript:void(0);">安凯客车</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪</a>
+                         </li> 
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+		<aside class="aside_letter">
+			<ul class="letter_list">
+				<li class="letter_item">热</li>
+				<li class="letter_item">*</li>
+				<li class="letter_item">A</li>
+				<li class="letter_item">B</li>
+			</ul>
+		</aside>
 	</section>
+	<!-- <section class="brank_set">
+		<div class="filter_head cover_head">
+			<a href="./m.filter_car.html" class="icon-angle-left"></a>
+			<p>选择车系</p>
+		</div>
+		<div class="filter_brand">
+			<p class="filter_brand_desc">*</p>
+			<dl class="filter_details_kind filter_details_brand">
+				<dt class="filter_details_tit">
+					<a href="">不限车系</a>
+				</dt>
+			</dl>
+			<p class="filter_brand_desc" data-index="A">A</p>
+			<dl class="filter_details_kind filter_details_brand">
+				<dd class="brand_details_dd">
+					<ul>
+						<li class="brand_details_item">
+							<a href="javascript:void(0);">奥迪</a>
+						</li>
+						<li class="brand_details_item">
+							<a href="">阿斯顿•马丁</a>
+						</li>
+						<li class="brand_details_item">
+							<a href="">安驰</a>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+			<p class="filter_brand_desc" data-index="B">B</p>
+			<dl class="filter_details_kind filter_details_brand">
+				<dd class="brand_details_dd">
+					<ul>
+						<li class="brand_details_item">
+							<a href="javascript:void(0);">别克</a>
+						</li>
+						<li class="brand_details_item">
+							<a href="javascript:void(0);">宝马</a>
+						</li>
+						<li class="brand_details_item">
+							<a href="javascript:void(0);">奔驰</a>
+						</li>
+						<li class="brand_details_item">
+							<a href="javascript:void(0);">标致</a>
+						</li>
+						<li class="brand_details_item">
+							<a href="javascript:void(0);">本田</a>
+						</li>
+						<li class="brand_details_item">
+							<a href="javascript:void(0);">比亚迪</a>
+						</li>
+						<li class="brand_details_item">
+							<a href="javascript:void(0);">宝骏</a>
+						</li>
+						<li class="brand_details_item">
+							<a href="javascript:void(0);">北汽威旺</a>
+						</li>
+						<li class="brand_details_item">
+							<a href="javascript:void(0);">北京</a>
+						</li>
+						<li class="brand_details_item">
+							<a href="javascript:void(0);">奔腾</a>
+						</li>
+						<li class="brand_details_item">
+							<a href="javascript:void(0);">宾利</a>
+						</li>
+						<li class="brand_details_item">
+							<a href="javascript:void(0);">布加迪</a>
+						</li>
+						<li class="brand_details_item">
+							<a href="javascript:void(0);">巴博斯</a>
+						</li>
+						<li class="brand_details_item">
+							<a href="javascript:void(0);">保斐利</a>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+	</section> -->
 </body>
 </html>
