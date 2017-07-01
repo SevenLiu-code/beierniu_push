@@ -100,9 +100,10 @@ i.price_triangle { position: absolute; right: 10%; top: 46%;
 		border-top: 0.1562rem solid #222; }			
 div.budget_price { border-radius: 0.125rem; }
 select.budget_price_select { position: absolute; right: 0; left: 0; top: 0; bottom: 0; 
-	width: 100%; text-indent: 0.4688rem; color: #888;  
+	width: 100%; text-indent: 0.4688rem; color: #888; color: #333;
 	appearance: button; -moz-appearance: button; -webkit-appearance: button;
 	background-color: transparent; border-radius: 0.125rem; display: none; }
+select.budget_price_select>option {  }	
 i.select_triangle { display: none; }
 
 
