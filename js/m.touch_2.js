@@ -27,10 +27,10 @@ $(function(){
 	// });
 	
 	$('div.budget_price, div.budget_price>i').on('touchstart', function(e){
-		$('div.budget_price>span').html('');
+		$('div.budget_price>span').html('');//清空模拟placeholder
 		$('select.budget_price_select').css({'display':'block'});
 		$('i.select_triangle').css({'display':'block'});
-		$('select.budget_price_select').trigger('click');
+		$('select.budget_price_select').trigger('click');//选择框模拟点击
 	});
 	$('ul.budget_price_selet>li').on('touchstart', function(e){
 		var text = $(this).html();

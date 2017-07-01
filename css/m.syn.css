@@ -84,7 +84,10 @@ ul.buy_sell_tit>li>a.current { border-bottom: 3px solid #d10310; }
 [data-dpr="3"] ul.buy_sell_tit>li>a { font-size: 42px; }
 div.form_inner_con { position: relative; }
 div.form_inner_con>div { position: absolute; width: 100% }
-
+i.must_icon { width: 0; height: 0; position: absolute;
+    top: 1px; left: 1px; border-right: 0.125rem solid transparent;
+    border-top: 0.125rem solid #d10310; /*border-top-right-radius: 50%;*/
+    /*border-top-left-radius: 50%;*/ }
 /*自定义下拉框*/
 div.mask { position: fixed; top: 0; bottom: 0; right: 0; left: 0; 
 		background-color: rgba(0, 0, 0, 0.1); display: none; }
@@ -95,8 +98,8 @@ div.fake_input { width: 100%; text-indent: 0.4688rem; line-height: 1rem;
 [data-dpr="3"] div.fake_input { font-size: 42px; }
 i.price_triangle { position: absolute; right: 10%; top: 46%; 
 		border-right: 0.1562rem solid transparent; border-left: 0.1562rem solid transparent; 
-		border-top: 0.1562rem solid #222;  }		
-ul.budget_price_selet { display: none; position: fixed; top: 50%; left: 8%; right: 8%;
+		border-top: 0.1562rem solid #222; }			
+/*ul.budget_price_selet { display: none; position: fixed; top: 50%; left: 8%; right: 8%;
 		background-color: #fff; border: 1px solid #a2a2a2; border-top: none;
 		padding: 0.3125rem 0; 
 		z-index: 2; height: auto; font-size: 14px; transform: translateY(-50%); }		
@@ -108,9 +111,10 @@ ul.budget_price_selet>li>i { display: inline-block;
 			width: 0.38rem; height: 0.38rem;
 			margin: 0 0.3rem; border-radius: 50%; border: 1px solid #a2a2a2; 
 			vertical-align: -0.085rem;  }
-ul.budget_price_selet>li.active>i{ border: 0.12rem solid #d10310; background-color: #fff; }
+ul.budget_price_selet>li.active>i{ border: 0.12rem solid #d10310; background-color: #fff; }*/
 
 /*默认下拉框*/
+
 div.budget_price { border-radius: 0.125rem; }
 select.budget_price_select { position: absolute; right: 0; left: 0; top: 0; bottom: 0; 
 	width: 100%; text-indent: 0.4688rem; color: #888;  
