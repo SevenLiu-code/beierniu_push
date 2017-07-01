@@ -116,7 +116,7 @@ select.budget_price_select { position: absolute; right: 0; left: 0; top: 0; bott
 	width: 100%; text-indent: 0.4688rem; color: #888;  
 	appearance: button; -moz-appearance: button; -webkit-appearance: button;
 	background-color: transparent; border-radius: 0.125rem; display: none; }
-
+i.select_triangle { display: none; }
 
 
 
