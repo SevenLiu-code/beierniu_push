@@ -26,24 +26,24 @@ $(function(){
 	// 	 if ( e.type == 'touchstart' ) e.preventDefault();
 	// });
 	
-	$('div.budget_price, div.budget_price>i').on('touchstart', function(e){
+	$('div.budget_price, div.budget_price>i').tap(function(e){
 		$('div.budget_price>span').html('');//清空模拟placeholder
 		$('select.budget_price_select').css({'display':'block'});
 		$('i.select_triangle').css({'display':'block'});
 		$('select.budget_price_select').trigger('click');//选择框模拟点击
 	});
-	$('ul.budget_price_selet>li').on('touchstart', function(e){
-		var text = $(this).html();
-		var data = $(this).attr('data');
-		$('ul.budget_price_selet>li').removeClass('active');
-		$(this).addClass('active');
-		$('div.mask').hide();//遮罩层隐藏
-		$('div.budget_price>span').html(text);
-		$('div.budget_price>i').removeClass('rotate');
-		$('.budget_price_selet').css({"display": "none"});
-		$('div.budget_price').attr({'data': data});
-		if ( e.type == 'touchstart' ) e.preventDefault();
-	});
+	// $('ul.budget_price_selet>li').on('touchstart', function(e){
+	// 	var text = $(this).html();
+	// 	var data = $(this).attr('data');
+	// 	$('ul.budget_price_selet>li').removeClass('active');
+	// 	$(this).addClass('active');
+	// 	$('div.mask').hide();//遮罩层隐藏
+	// 	$('div.budget_price>span').html(text);
+	// 	$('div.budget_price>i').removeClass('rotate');
+	// 	$('.budget_price_selet').css({"display": "none"});
+	// 	$('div.budget_price').attr({'data': data});
+	// 	if ( e.type == 'touchstart' ) e.preventDefault();
+	// });
 	//寻求合作页表单提交
 	$('.coopera_form button.form_commit').tap(function(){
 		var $this = $(this);
