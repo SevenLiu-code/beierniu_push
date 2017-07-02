@@ -10,7 +10,7 @@ $(function(){
 	// })
 
 	//请求子系列
-	$('li.find_set').on('touchstart', function(e){
+	$('li.find_set').on('touchend', function(e){
 		var brand = $(this).find('a').attr('data-brand');
 		$.ajax({
 			cache : true,
@@ -26,14 +26,14 @@ $(function(){
 					}
 				}
 			});
-		if ( e.type == 'touchstart' ) e.preventDefault();
+		if ( e.type == 'touchend' ) e.preventDefault();
 	});
 	//子品牌页返回
-	$('section.brank_set .filter_head>a').on('touchstart', function(e){
+	$('section.brank_set .filter_head>a').on('touchend', function(e){
 
 		$('section.brank_set').hide();
 		$('section.car_brank').show();
-		if ( e.type == 'touchstart' ) e.preventDefault();
+		if ( e.type == 'touchend' ) e.preventDefault();
 	});
 	//录入买家页表单提交
 	$('button.buy_car_commit').tap(function(){
@@ -112,9 +112,9 @@ $(function(){
 		 }
 	});
 	//错误文本触碰关闭
-	$('p.error_text').on('touchstart', function(e){
+	$('p.error_text').on('touchend', function(e){
 		$(this).hide();
-		if ( e.type == 'touchstart' ) { e.preventDefault(); }
+		if ( e.type == 'touchend' ) { e.preventDefault(); }
 	});
 	//表单页表单提交成功返回
 	$('.form_con_inner a.return').tap(function(){
@@ -125,21 +125,21 @@ $(function(){
 		$('.form_con_inner .ask_box_success').hide();
 	});
 	//选择品牌
-	$('div.brank_select').on('touchstart', function(e){
+	$('div.brank_select').on('touchend', function(e){
 		$('.hidden_part').css({'display':'none'});
 		$('section.car_brank').css({'display':'block'});
-		if ( e.type == 'touchstart' ) e.preventDefault();
+		if ( e.type == 'touchend' ) e.preventDefault();
 	})
-	$('section.car_brank>.filter_head>a').on('touchstart', function(e){
+	$('section.car_brank>.filter_head>a').on('touchend', function(e){
 		$('section.car_brank').css({'display':'none'});
 		$('.hidden_part').css({'display':'block'});
-		if ( e.type == 'touchstart' ) e.preventDefault();
+		if ( e.type == 'touchend' ) e.preventDefault();
 	});
 
 	//提交成功返回
-	$('div.return_link>a').on('touchstart', function(e){
+	$('div.return_link>a').on('touchend', function(e){
 		$('div.ask_box_success').hide();
 		$('div.buy_sell_form_con').show();
-		if ( e.type == 'touchstart' ) e.preventDefault();
+		if ( e.type == 'touchend' ) e.preventDefault();
 	})
 })
