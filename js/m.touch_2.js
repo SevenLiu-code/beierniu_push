@@ -4,6 +4,7 @@ $(function(){
 	//select
 	$('select.budget_price_select, div.budget_price>i').one('tap', function(e){
 		$('select.budget_price_select>option').first().attr({'disabled':'disabled'});	
+		$('select.budget_price_select').addClass('current');
 	});
 	//子品牌页返回
 	$('section.brank_set .filter_head>a').on('touchend', function(e){
@@ -30,6 +31,13 @@ $(function(){
 				}
 			});
 		if ( e.type == 'touchend' ) e.preventDefault();
+	});
+	//录入车源子序列选中
+	$('a.car_brands_option').on('touchend', function(){
+		var html = $(this).html();
+		$('input.brank_select_set_off').addClass('current').val(html);
+		$('section.car_brank, section.brank_set').hide();
+		$('.hidden_part').show();
 	});
 	//请求车辆款式
 	$('section.find_set_detail li.find_set').on('touchend', function(e){
@@ -136,13 +144,13 @@ $(function(){
 		if ( e.type == 'touchend' ) { e.preventDefault(); }
 	});
 	//选择品牌
-	$('div.brank_select_set_off').on('touchend', function(e){
+	$('input.brank_select_set_off').on('touchend', function(e){
 		$('.hidden_part').css({'display':'none'});
 		$('section.car_brank').css({'display':'block'});
 		if ( e.type == 'touchend' ) e.preventDefault();
 	})
 	//选择品牌需要选择车辆款式
-	$('div.brank_select_set').on('touchend', function(e){
+	$('input.brank_select_set').on('touchend', function(e){
 		$('section.brank_set').addClass('find_set_detail');//添加泪标志，用于区分事件
 		$('.hidden_part').css({'display':'none'});
 		$('section.car_brank').css({'display':'block'});
