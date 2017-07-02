@@ -1,10 +1,9 @@
 
 /*价格筛选*/
-
-dt.filter_details_tit { padding: 0.1562rem .4688rem 0 .4688rem;
+dt.filter_details_tit { padding: 0.1562rem .4688rem 0.0781rem .4688rem;
 		line-height: .5rem; font-size: 0.375rem; color: #333; 
 		background-color: #f5f5f5; }	
-
+dt.hot_brand_tit { padding-top: 0.3906rem; padding-bottom: 0.3125rem; background-color: #fff; }
 
 /*更多筛选按钮*/
 .cover_head, div.car_parameter_head { display:flex; display: -webkit-flex; 
@@ -26,12 +25,12 @@ li.brand_details_item { position: relative; }
 dt.filter_details_tit>a { color: #333; }
 dd.brand_details_dd>a, li.brand_details_item>a { display: block; padding: 0 .9rem; 
 			border-bottom: 1px solid #e6e6e6;
-			font-size: 14px; color: #252825; line-height: 1.3rem; }	
+			font-size: 14px; color: #252825; line-height: 1.2rem; }	
 dd.brand_details_dd :last-child>a { border-bottom: none;  }			
 [data-dpr="2"] li.brand_details_item>a,
 [data-dpr="2"] dd.brand_details_dd>a { font-size: 28px; }
 [data-dpr="3"] li.brand_details_item>a, 
-[data-dpr="3"] dd.brand_details_dd>a { font-size: 46px; }
+[data-dpr="3"] dd.brand_details_dd>a { font-size: 42px; }
 /*字母定位*/
 aside.aside_letter { position: fixed; right: 0; top: 5%; } 
 aside ul.letter_list>li { text-align: center; line-height: 0.625rem;
@@ -55,5 +54,5 @@ ul.brand_series_list li { padding-left: 0.4688rem; border-bottom: 1px solid #e6e
 ul.brand_series_list li>a { display: block; color: #3c3c3c; line-height: 44px; }	
  [data-dpr="2"] ul.brand_series_list li>a { line-height: 88px; }
  [data-dpr="3"] ul.brand_series_list li>a { line-height: 132px; }
-		
-
+	
+.form_row>span.wan { position: absolute; right: 40%; top: 0.34rem; }

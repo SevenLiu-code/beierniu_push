@@ -5,11 +5,13 @@ function brank_letter() {
 				$('aside.aside_letter li.letter_item').on('touchstart', function(e){
 					var $letter_item_index = $(this).index();//当前字母的序号，与dl列表对应
 					var dl_offsetTop = $('dl.filter_details_kind').eq($letter_item_index).offset().top;
+					console.log( dl_offsetTop );
 					$(window).scrollTop(dl_offsetTop); //滚动条高度设置为对应dl列表距文档顶部高度
 					if (e.type == 'touchstart') e.preventDefault();
 				})
-			}else{ return; }
-		} 
+			}else { return; }
+	};
+
 function buySellEnvent(){
 		var h = 0;
 		$('div.form_inner_con div.form_box').css({"display": "none"}).eq(0).css({"display": "block"});
@@ -26,7 +28,8 @@ function buySellEnvent(){
 					$('div.form_inner_con').height(h);
 				}
 		})
-	}
+	};
+
 $(function(){
 	buySellEnvent();
 	brank_letter();
@@ -37,6 +40,5 @@ $(function(){
         'minDate': '1980-1', //最小日期
         'maxDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 1)
     });
-
 })
 

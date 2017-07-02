@@ -30,7 +30,7 @@ input:-ms-input-placeholder{
 input::-webkit-input-placeholder{
     color: #888;opacity:1;
 }
-
+div.filter_brand { }
 header.custom_header i { background-image: url(../images/base/custom.png); }
 section.custom_bg { background: url(../images/banner/custom_bg.png) no-repeat;
 				background-size: 100%; }
@@ -42,7 +42,8 @@ div.form_row { display: flex; display: -webkit-flex; border-radius: 0.125rem;
 div.form_row input { display: inline-block; height: 1rem; text-indent: 0.4688rem;
 		font-size: 14px; border: 1px solid #a2a2a2; -webkit-appearance: none; 
 	    border-radius: 0.125rem; }
-div.form_row p.error_text { position: absolute; top: 0.2rem; right: 0.4688rem; }		
+div.form_row p.error_text { position: absolute; top: 0.34rem; right: 1.4rem;
+		color: #d10310; display: none; }		
 [data-dpr="2"] div.form_row input, [data-dpr="2"] div.input_full textarea,
 [data-dpr="2"] div.form_row select, [data-dpr="2"] .form_box button{ font-size: 28px; }
 [data-dpr="3"] div.form_row input, [data-dpr="3"] div.input_full textarea,
@@ -116,9 +117,9 @@ section.car_brank, section.brank_set {
 div.home_menu { padding-top: 0.5625rem; }
 ul.h_menu_main { display: -webkit-flex; /* Safari */ display: flex; }
 ul.h_menu_main>li.h_menu_item { width: 25%; text-align: center; margin-bottom: 0.4688rem; }
-li.h_menu_item>a { color: #495056; font-size: 14px; line-height: 26px; }
-[data-dpr="2"] li.h_menu_item>a { font-size: 28px; line-height: 52px; }
-[data-dpr="3"] li.h_menu_item>a { font-size: 50px; line-height: 78px; }
+li.h_menu_item>a { color: #495056; font-size: 14px; line-height: 24px; }
+[data-dpr="2"] li.h_menu_item>a { font-size: 28px; line-height: 48px; }
+[data-dpr="3"] li.h_menu_item>a { font-size: 50px; line-height: 72px; }
 ul.h_menu_brand { display: block; overflow: hidden; margin-bottom: 0.1562rem; 
 		}
 ul.h_menu_brand li.h_menu_item { float: left; margin: 0.2rem 0; }
@@ -136,8 +137,11 @@ li.h_menu_item>a.benz>i { background-image: url(../images/brand/benz.png); }
 li.h_menu_item>a.honda>i { background-image: url(../images/brand/honda.png); }
 
 /*品牌子系列*/
-
-
+section.brank_set { display: none; }
+h2.current_brand { padding: 0 .9rem; font-weight: 500; line-height: .9rem;
+	color: #333; font-size: 14px; }
+[data-dpr="2"] h2.current_brand { font-size: 28px; }
+[data-dpr="3"] h2.current_brand { font-size: 42px; }
 
 
 
