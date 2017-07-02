@@ -115,8 +115,7 @@ $(function(){
 	$('p.error_text').on('touchstart', function(e){
 		$(this).hide();
 		if ( e.type == 'touchstart' ) { e.preventDefault(); }
-	})
-
+	});
 	//表单页表单提交成功返回
 	$('.form_con_inner a.return').tap(function(){
 		clearInterval(waiting);
@@ -124,7 +123,7 @@ $(function(){
 		$('button.get_code').html('获取验证码');
 		$('.form_con_inner .form_input_con').show();
 		$('.form_con_inner .ask_box_success').hide();
-	})
+	});
 	//选择品牌
 	$('div.brank_select').on('touchstart', function(e){
 		$('.hidden_part').css({'display':'none'});
