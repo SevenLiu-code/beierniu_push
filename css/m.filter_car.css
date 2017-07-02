@@ -55,4 +55,4 @@ ul.brand_series_list li>a { display: block; color: #3c3c3c; line-height: 44px; }
  [data-dpr="2"] ul.brand_series_list li>a { line-height: 88px; }
  [data-dpr="3"] ul.brand_series_list li>a { line-height: 132px; }
 	
-.form_row>span.wan { position: absolute; right: 40%; top: 0.34rem; }
+.form_row>span.wan { position: absolute; right: 40%; top: 0.34rem; \ }

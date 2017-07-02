@@ -138,13 +138,15 @@ li.h_menu_item>a.honda>i { background-image: url(../images/brand/honda.png); }
 
 /*品牌子系列*/
 section.brank_set { display: none; }
-h2.current_brand { padding: 0 .9rem; font-weight: 500; line-height: .9rem;
+h2.current_brand, h2._set_detail { padding: 0 .9rem; font-weight: 500; line-height: .9rem;
 	color: #333; font-size: 14px; }
-[data-dpr="2"] h2.current_brand { font-size: 28px; }
-[data-dpr="3"] h2.current_brand { font-size: 42px; }
-
-
-
+[data-dpr="2"] h2.current_brand,
+[data-dpr="2"] h2._set_detail { font-size: 28px; }
+[data-dpr="3"] h2.current_brand,
+[data-dpr="3"] h2._set_detail { font-size: 42px; }
+a.set_detail_tit { text-overflow: ellipsis; overflow:hidden; white-space: nowrap; }
+/*车款式*/
+section.car_set_detail { display: none; }
 
 
 
