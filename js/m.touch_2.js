@@ -14,7 +14,7 @@ function car_brands_option(){
 	}
 //请求车辆款式函数
 function find_set_detail(){
-	$('section.brank_set a.find_set_detail').on('touchend', function(e){
+	$('section.brank_set a.find_set_detail').tap(function(e){
 		var brand = $(this).find('a').attr('data-brand');//车系参数
 		// $.ajax({
 		// 	cache : true,
@@ -31,7 +31,7 @@ function find_set_detail(){
 			// 		}
 			// 	}
 			// });
-		if ( e.type == 'touchend' ) e.preventDefault();
+		// if ( e.type == 'touchend' ) e.preventDefault();
 	});
 }	
 $(function(){
