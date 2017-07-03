@@ -74,7 +74,7 @@ $(function(){
 		if ( e.type == 'touchend' ) e.preventDefault();
 	});
 	//品牌车型选中
-	$('a.car_brands_option').on('touchend', function(){
+	$('a.car_brands_option').on('touchend', function(e){
 		var html = $(this).html();
 		$('input.brank_select_set_off').addClass('current').val(html);
 		$('section.car_brank, section.brank_set').hide();
