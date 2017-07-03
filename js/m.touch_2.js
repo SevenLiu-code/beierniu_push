@@ -12,6 +12,7 @@ $(function(){
 		$('.hidden_part').css({'display':'none'});
 		$('section.car_brank').css({'display':'block'});
 		// if ( e.type == 'touchend' ) e.preventDefault();
+		$(window).scrollTop(0);//滚动条设为0
 	});
 	//车系可选择品牌进入
 	$('input.brank_select_set').on('touchend', function(e){
@@ -48,6 +49,7 @@ $(function(){
 					$('section.car_brank').hide();
 					//子系列添加内容
 					$('section.brank_set').show();
+					$(window).scrollTop(0); //滚动条设为0
 			// 		}
 			// 	}
 			// });
