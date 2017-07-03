@@ -13,13 +13,6 @@ $(function(){
 		$('section.car_brank').css({'display':'block'});
 		// if ( e.type == 'touchend' ) e.preventDefault();
 	});
-	//录入车源车系选中
-	$('a.car_brands_option').on('touchend', function(){
-		var html = $(this).html();
-		$('input.brank_select_set_off').addClass('current').val(html);
-		$('section.car_brank, section.brank_set').hide();
-		$('.hidden_part').show();
-	});
 	//车系可选择品牌进入
 	$('input.brank_select_set').on('touchend', function(e){
 		$('section.brank_set').addClass('find_set_detail');//添加类标志，用于区分事件
@@ -34,7 +27,6 @@ $(function(){
 		$('.hidden_part').css({'display':'block'});
 		if ( e.type == 'touchend' ) e.preventDefault();
 	});
-
 	//子系列页返回
 	$('section.brank_set .filter_head>a').on('touchend', function(e){
 		$('section.brank_set').hide();
@@ -42,7 +34,7 @@ $(function(){
 		if ( e.type == 'touchend' ) e.preventDefault();
 	});
 	//请求车系
-	$('li.find_set').on('touchend', function(e){
+	$('li.find_set').tap(function(e){
 		// var brand = $(this).find('a').attr('data-brand');//品牌参数
 		// $.ajax({
 		// 	cache : true,
@@ -80,6 +72,13 @@ $(function(){
 				}
 			});
 		if ( e.type == 'touchend' ) e.preventDefault();
+	});
+	//品牌车型选中
+	$('a.car_brands_option').tap(function(){
+		var html = $(this).html();
+		$('input.brank_select_set_off').addClass('current').val(html);
+		$('section.car_brank, section.brank_set').hide();
+		$('.hidden_part').show();
 	});
 	//录入买家页表单提交
 	$('button.buy_car_commit').tap(function(){
@@ -165,7 +164,6 @@ $(function(){
 		$(this).hide();
 		if ( e.type == 'touchend' ) { e.preventDefault(); }
 	});
-
 	//提交成功返回
 	$('div.return_link>a').on('touchend', function(e){
 		$('div.ask_box_success').hide();
