@@ -43,22 +43,22 @@ $(function(){
 	});
 	//请求车系
 	$('li.find_set').on('touchend', function(e){
-		var brand = $(this).find('a').attr('data-brand');//品牌参数
-		$.ajax({
-			cache : true,
-			type : "POST",
-			url : "",
-			data : "",
-			async : false,
-			dataType:"json",
-			success: function(data) {
-				if(data.code==3){
+		// var brand = $(this).find('a').attr('data-brand');//品牌参数
+		// $.ajax({
+		// 	cache : true,
+		// 	type : "POST",
+		// 	url : "",
+		// 	data : "",
+		// 	async : false,
+		// 	dataType:"json",
+		// 	success: function(data) {
+		// 		if(data.code==3){
 					$('section.car_brank').hide();
 					//子系列添加内容
 					$('section.brank_set').show();
-					}
-				}
-			});
+			// 		}
+			// 	}
+			// });
 		if ( e.type == 'touchend' ) e.preventDefault();
 	});
 	//请求车辆款式
