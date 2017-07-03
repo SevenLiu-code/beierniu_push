@@ -76,9 +76,9 @@ $(function(){
 		 }else if( price == 'none' ){
 			$box.find('p.price_error_text').html('预算价格为必选项').show();
 		 }else {
-		 	var brank_select = $box.find('div.brank_select').attr('data');
-		 	//取到品牌选择的data
-		 	arry.push(name, phone, price, brank_select);
+		 	var brank_select_text = $box.find('input.brank_select').val();
+		 	//取到用户选择车辆品牌车系文本
+		 	arry.push(name, phone, price, brank_select_text);
 		 	$.ajax({
 				cache : true,
 				type : "POST",
@@ -105,7 +105,7 @@ $(function(){
 		var $box = $(this).parents('.sell_car_form');
 		var name = $box.find('input.name_input').val();//卖家姓名
 		var phone = $box.find('input.phone_input').val();//手机号码
-		var brank_select = $box.find('div.brand_select').attr('data');//品牌车型
+		var brank_select_text = $box.find('input.brand_select').attr('data');//品牌车型
 		var time = $box.find('input.time_input').val();
 		var mileage = $box.find('input.mileage_input').val();//表显里程
 		$box.find('p.error_text').hide();//隐藏所以错误提示文本
