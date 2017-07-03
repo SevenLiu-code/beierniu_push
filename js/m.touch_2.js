@@ -15,7 +15,7 @@ $(function(){
 		$(window).scrollTop(0);//滚动条设为0
 	});
 	//车系可选择品牌进入
-	$('input.brank_select_set').on('touchend', function(e){
+	$('input.brank_select_set').tap(function(e){
 		$('section.brank_set').addClass('find_set_detail');//添加类标志，用于区分事件
 		$('.hidden_part').css({'display':'none'});
 		$('section.car_brank').css({'display':'block'});
@@ -76,11 +76,15 @@ $(function(){
 		if ( e.type == 'touchend' ) e.preventDefault();
 	});
 	//品牌车型选中
-	$('a.car_brands_option').on('touchend', function(e){
+	$('a.car_brands_option').tap(function(e){
 		var html = $(this).html();
 		$('input.brank_select_set_off').addClass('current').val(html);
 		$('section.car_brank, section.brank_set').hide();
+		$('div.click_mask').show();
 		$('.hidden_part').show();
+		var t = setTimeout(function(){
+			$('div.click_mask').hide();
+		}, 350);
 		if ( e.type == 'touchend' ) e.preventDefault();
 	});
 	//录入买家页表单提交

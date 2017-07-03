@@ -147,7 +147,9 @@ h2.current_brand, h2._set_detail { padding: 0 .9rem; font-weight: 500; line-heig
 a.set_detail_tit { text-overflow: ellipsis; overflow:hidden; white-space: nowrap; }
 /*车款式*/
 section.car_set_detail { display: none; }
-div.brank_select
+/*点透遮罩*/
+div.click_mask { position: fixed; top: 0; bottom: 0; left: 0; right: 0;
+		background-color: transparent; z-index: 9; display: none; }
 
 
 
