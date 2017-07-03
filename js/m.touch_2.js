@@ -37,10 +37,11 @@ function find_set_detail(){
 $(function(){
 	//select
 	$('select.budget_price_select, div.budget_price>i').one('tap', function(e){
-		$('select.budget_price_select>option').first().attr({'disabled':'disabled'});	
+		$('select.budget_price_select>option').first().attr({'disabled':'disabled'});
+	});
+	$('select.budget_price_select').one('change', function(){
 		$('select.budget_price_select').addClass('current');
 	});
-
 	//车款式不可选择品牌进入
 	$('input.brank_select_set_off').tap(function(e){
 		$('.hidden_part').css({'display':'none'});

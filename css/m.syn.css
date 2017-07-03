@@ -36,7 +36,7 @@ section.custom_bg { background: url(../images/banner/custom_bg.png) no-repeat;
 				background-size: 100%; }
 section.form_con { padding: 0 0.4688rem; text-align: center; }
 section.form_con h2 { margin-bottom: 0.2rem; }
-div.form_con_inner { padding: 0.3rem; background-color: #fff; }
+div.form_con_inner { padding: 0.31rem; background-color: #fff; }
 div.form_row { display: flex; display: -webkit-flex; border-radius: 0.125rem;
 	margin-bottom: 0.34rem; position: relative; width: 100%; overflow: hidden; }		
 div.form_row input { display: inline-block; height: 1rem; text-indent: 0.4688rem;
