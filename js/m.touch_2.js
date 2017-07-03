@@ -1,5 +1,39 @@
-
-
+//品牌车型选中函数
+function car_brands_option(){
+		$('a.car_brands_option').tap(function(e){
+			var html = $(this).html();
+			$('input.brank_select_set_off').addClass('current').val(html);
+			$('section.car_brank, section.brank_set').hide();
+			$('div.click_mask').show();
+			$('.hidden_part').show();
+			var t = setTimeout(function(){
+				$('div.click_mask').hide();
+			}, 350);
+			if ( e.type == 'touchend' ) e.preventDefault();
+		});
+	}
+//请求车辆款式函数
+function find_set_detail(){
+	$('section.brank_set a.find_set_detail').on('touchend', function(e){
+		var brand = $(this).find('a').attr('data-brand');//车系参数
+		// $.ajax({
+		// 	cache : true,
+		// 	type : "POST",
+		// 	url : "",
+		// 	data : "",
+		// 	async : false,
+		// 	dataType:"json",
+		// 	success: function(data) {
+		// 		if(data.code==3){
+					$('section.brank_set').css({'display':'none'});
+					//款式添加内容
+					$('section.car_set_detail').show();
+			// 		}
+			// 	}
+			// });
+		if ( e.type == 'touchend' ) e.preventDefault();
+	});
+}	
 $(function(){
 	//select
 	$('select.budget_price_select, div.budget_price>i').one('tap', function(e){
@@ -7,19 +41,29 @@ $(function(){
 		$('select.budget_price_select').addClass('current');
 	});
 
-	//车系不可选择品牌进入
+	//车款式不可选择品牌进入
 	$('input.brank_select_set_off').tap(function(e){
 		$('.hidden_part').css({'display':'none'});
 		$('section.car_brank').css({'display':'block'});
-		// if ( e.type == 'touchend' ) e.preventDefault();
+		$('dl.no_filter_dl').css({'display':'block'});//显示不限
+		$('section.car_brank a.no_brand, section.brank_set .filter_brand a').addClass('car_brands_option');
+		//不获取车款式内容添加标志类名
 		$(window).scrollTop(0);//滚动条设为0
+		$('section.brank_set li.brand_details_item>a').removeClass('find_set_detail');
+		//去掉获取车辆款式类名标志
+		car_brands_option();//绑定不获取车辆款式选择确定事件
 	});
-	//车系可选择品牌进入
+	//车款式可选择品牌进入
 	$('input.brank_select_set').tap(function(e){
-		$('section.brank_set').addClass('find_set_detail');//添加类标志，用于区分事件
+		// $('section.brank_set').addClass('find_set_detail');//添加类标志，用于区分事件
 		$('.hidden_part').css({'display':'none'});
+		$('dl.no_filter_dl').css({'display':'none'});//隐藏不限
 		$('section.car_brank').css({'display':'block'});
-		if ( e.type == 'touchend' ) e.preventDefault();
+		$('section.car_brank a.no_brand, section.brank_set .filter_brand a').removeClass('car_brands_option');
+		//获取车款式内容，去除标志类名
+		$('section.brank_set li.brand_details_item>a').addClass('find_set_detail');
+		//添加获取车辆款式类名标志
+		find_set_detail();//绑定获取车辆款式选择确定事件
 	})
 	//品牌选择页返回
 	$('section.car_brank>.filter_head>a').on('touchend', function(e){
@@ -35,7 +79,7 @@ $(function(){
 		if ( e.type == 'touchend' ) e.preventDefault();
 	});
 	//请求车系
-	$('li.find_set').tap(function(e){
+	$('section.car_brank li.find_set>a').tap(function(e){
 		// var brand = $(this).find('a').attr('data-brand');//品牌参数
 		// $.ajax({
 		// 	cache : true,
@@ -55,37 +99,20 @@ $(function(){
 			// });
 		if ( e.type == 'touchend' ) e.preventDefault();
 	});
-	//请求车辆款式
-	$('section.find_set_detail li.find_set').on('touchend', function(e){
-		var brand = $(this).find('a').attr('data-brand');//车系参数
-		$.ajax({
-			cache : true,
-			type : "POST",
-			url : "",
-			data : "",
-			async : false,
-			dataType:"json",
-			success: function(data) {
-				if(data.code==3){
-					$('section.car_brank').hide();
-					//款式添加内容
-					$('section.brank_set').show();
-					}
-				}
-			});
-		if ( e.type == 'touchend' ) e.preventDefault();
+	//车辆款式页返回
+	$('section.car_set_detail .filter_head>a').on('touchend', function(e){
+		$('section.car_set_detail').hide();
+		$('section.brank_set').show();
 	});
-	//品牌车型选中
-	$('a.car_brands_option').tap(function(e){
+	//车辆款式选中
+	$('section.car_set_detail li.brand_details_item>a').tap(function(){
 		var html = $(this).html();
-		$('input.brank_select_set_off').addClass('current').val(html);
-		$('section.car_brank, section.brank_set').hide();
-		$('div.click_mask').show();
-		$('.hidden_part').show();
+		$('input.brank_select_set').addClass('current').val(html);
+		$('section.car_set_detail').hide();
+		$('div.click_mask, .hidden_part').show();
 		var t = setTimeout(function(){
 			$('div.click_mask').hide();
 		}, 350);
-		if ( e.type == 'touchend' ) e.preventDefault();
 	});
 	//录入买家页表单提交
 	$('button.buy_car_commit').tap(function(){
@@ -141,7 +168,7 @@ $(function(){
 			$box.find('p.name_error_text').html('买家姓名为必填项').show();
 		 }else if (!Rex_phone.test(phone)){
 		 	$box.find('p.phone_error_text').html('手机号码填写有误').show();
-		 }else if( brank_select == 'none' ){
+		 }else if( brank_select_text == 'none' ){
 		 	$box.find('p.brand_error_text').html('请选择品牌车型').show();
 		 }else if( time == '' || time.length == 0 ){
 		 	$box.find('p.time_error_text').html('请选择上牌时间').show();

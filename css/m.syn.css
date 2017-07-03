@@ -111,7 +111,7 @@ select>option { font-size: 14px; }
 select.budget_price_select.current{ color: #333; }		
 
 /*选择品牌*/
-section.car_brank, section.brank_set {
+section.car_brank, section.brank_set, section.car_set_detail {
 	overflow: auto; display: none; background-color: #fff; }
 /*热门品牌*/
 div.home_menu { padding-top: 0.5625rem; }

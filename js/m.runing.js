@@ -24,7 +24,7 @@ function buySellEnvent(){
 					$(this).parents('ul.buy_sell_tit').find('a.current').removeClass('current');
 					$(this).addClass('current');
 					$('div.form_inner_con div.form_box').css({"display": "none"}).eq($(this).parent().index()).css({"display": "block"});
-					 h = $('.car_list_con').eq($(this).parent().index()).height();
+					 h = $('div.form_inner_con div.form_box').eq($(this).parent().index()).height();
 					$('div.form_inner_con').height(h);
 				};
 		})
