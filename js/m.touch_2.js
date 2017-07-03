@@ -74,11 +74,12 @@ $(function(){
 		if ( e.type == 'touchend' ) e.preventDefault();
 	});
 	//品牌车型选中
-	$('a.car_brands_option').tap(function(){
+	$('a.car_brands_option').on('touchend', function(){
 		var html = $(this).html();
 		$('input.brank_select_set_off').addClass('current').val(html);
 		$('section.car_brank, section.brank_set').hide();
 		$('.hidden_part').show();
+		if ( e.type == 'touchend' ) e.preventDefault();
 	});
 	//录入买家页表单提交
 	$('button.buy_car_commit').tap(function(){
