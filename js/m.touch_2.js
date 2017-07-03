@@ -161,7 +161,7 @@ $(function(){
 		var $box = $(this).parents('.sell_car_form');
 		var name = $box.find('input.name_input').val();//卖家姓名
 		var phone = $box.find('input.phone_input').val();//手机号码
-		var brank_select_text = $box.find('input.brand_select').attr('data');//品牌车型
+		var brank_select_text = $box.find('input.brand_select').val();//品牌车型
 		var time = $box.find('input.time_input').val();
 		var mileage = $box.find('input.mileage_input').val();//表显里程
 		$box.find('p.error_text').hide();//隐藏所以错误提示文本
@@ -169,15 +169,15 @@ $(function(){
 			$box.find('p.name_error_text').html('买家姓名为必填项').show();
 		 }else if (!Rex_phone.test(phone)){
 		 	$box.find('p.phone_error_text').html('手机号码填写有误').show();
-		 }else if( brank_select_text == 'none' ){
+		 }else if( brank_select_text == '' || brank_select_text.length == 0 ){
 		 	$box.find('p.brand_error_text').html('请选择品牌车型').show();
 		 }else if( time == '' || time.length == 0 ){
 		 	$box.find('p.time_error_text').html('请选择上牌时间').show();
-		 }else if( Rex_mileage.test(mileage) ){
+		 }else if( !Rex_mileage.test(mileage) ){
 		 	$box.find('p.mileage_error_text').html('表显里程输入有误').show();
 		 }else{
 		 	//取到品牌选择的data
-		 	arry.push(name, phone, brank_select, time, mileage);
+		 	arry.push(name, phone, brank_select_text, time, mileage);
 		 	$.ajax({
 				cache : true,
 				type : "POST",
