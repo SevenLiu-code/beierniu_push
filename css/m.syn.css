@@ -38,7 +38,7 @@ section.form_con { padding: 0 0.4688rem; text-align: center; }
 section.form_con h2 { margin-bottom: 0.2rem; }
 div.form_con_inner { padding: 0.32rem; background-color: #fff; }
 div.form_row { display: flex; display: -webkit-flex; border-radius: 0.125rem;
-	margin-bottom: 0.34rem; position: relative; width: 100%; overflow: hidden; }		
+	margin-bottom: 0.34rem; position: relative; width: 100%; /*overflow: hidden;*/ }		
 div.form_row input { display: inline-block; height: 1rem; text-indent: 0.4688rem;
 		font-size: 14px; border: 1px solid #a2a2a2; -webkit-appearance: none; 
 	    border-radius: 0.125rem; }
@@ -83,8 +83,8 @@ ul.buy_sell_tit>li>a { display: block; width: 60%; margin: auto;
 ul.buy_sell_tit>li>a.current { border-bottom: 3px solid #d10310; }		 
 [data-dpr="2"] ul.buy_sell_tit>li>a { font-size: 28px; }
 [data-dpr="3"] ul.buy_sell_tit>li>a { font-size: 42px; }
-div.form_inner_con { position: relative; }
-div.form_inner_con>div { position: absolute; width: 100% }
+div.form_inner_con { position: relative; width: 100%; }
+div.form_inner_con>div { position: absolute; width: 100%; }
 i.must_icon { width: 0; height: 0; position: absolute;
     top: 1px; left: 1px; border-right: 0.2rem solid transparent;
     border-top: 0.2rem solid #d10310; }
