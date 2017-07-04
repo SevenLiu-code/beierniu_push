@@ -56,7 +56,6 @@ div.input_full textarea { text-indent: 0; padding: 0.1562rem 0 0 0.4688rem; }
 div.input_half { position: relative; justify-content: space-between; }
 div.input_half>i { position: absolute; right: 0.3125rem; top: 0.35rem;
 		color: #666; }
-
 div.input_half select>option { display: inline-block; width: 100%; font-size: 14px; }
 [data-dpr="2"]  div.input_half select>option { font-size: 28px; }
 [data-dpr="3"]  div.input_half select>option { font-size: 42px; }

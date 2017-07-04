@@ -7,7 +7,7 @@ function car_brands_option(){
 			$('div.click_mask').show();
 			$('.hidden_part').show();
 			var t = setTimeout(function(){
-				$('div.click_mask').hide();
+				$('div.click_mask').hide();//350毫秒后隐藏防点透遮罩；
 			}, 350);
 			if ( e.type == 'touchend' ) e.preventDefault();
 		});
