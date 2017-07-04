@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>购买新车</title>
+	<title>二手车买卖</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="">
 	<meta name="keywords" content="">
@@ -18,42 +18,102 @@
 	<script type="text/javascript" src="./js/LCalendar.min.js"></script>
 	<script type="text/javascript" src="./js/m.runing.js"></script>
 	<script type="text/javascript" src="./js/m.touch_2.js"></script>
-
 </head>
 <body>
-	<header class="return_header cover_head hidden_part">
+	<header class="return_header cover_head coopera_header hidden_part">
 		<a href="./m.home.html" class="return_iocn icon-angle-left"></a>
-		<p><i class="return_header_icon"></i>购买新车</p>
+		<p><i class="return_header_icon"></i>二手车买卖</p>
 	</header>
-	<section class="coopera_bg common_banner hidden_part">
+	<section class="buy_sell_bg common_banner hidden_part">
 		<img src="./images/banner/coopera.jpg" alt="">
 	</section>
-	<section class="new_car_con form_con hidden_part">
-		<div class="new_car_inner form_con_inner">
-			<div class="new_car_form_con form_input_con">
-				<div class="form_box new_car_form">
-					<div class="form_row input_full">
-						<input class="name_input" type="text" name="userName" placeholder="请输入您的姓名" maxlength="15">
-						<i class="must_icon"></i>
-						<p class="error_text name_error_text"></p>
+	<div class="click_mask"></div>
+	<section class="buy_sell_con form_con hidden_part">
+		<div class="buy_sell_inner form_con_inner">
+			<div class="buy_sell_form_con form_input_con">
+				<ul class="buy_sell_tit">
+					<li>
+						<a href="javascript:;" class="current">录入买家</a>
+					</li>
+					<li>
+						<a href="javascript:;">录入车源</a>
+					</li>
+				</ul>
+				<div class="form_inner_con">
+					<!-- 录入买家 -->
+					<div class="form_box buy_car_form">
+						<div class="form_row input_full box_s">
+							<input class="name_input" type="text" name="userName" placeholder="请输入买家姓名" maxlength="18">
+							<i class="must_icon"></i>
+							<p class="error_text name_error_text"></p>
+						</div>
+						<div class="form_row input_full box_s">
+							<input class="phone_input" type="tel" name="phone" placeholder="请输入手机号码" maxlength="11">
+							<i class="must_icon"></i>
+							<p class="error_text phone_error_text"></p>
+						</div>
+						<div class="form_row input_full box_s">
+							<input class="budget_price fake_input" data="none" readonly="readonly">
+								<i class="must_icon"></i>
+							</input> 
+							<i class="triangle_iocn select_triangle"></i>
+							<select class="budget_price_select" name="budget_price">
+								<option value="none">请选择预算价格</option>
+								<option value="no-limit ">不限</option>
+								<option value="0-5">0-5万</option>
+								<option value="5-10">5-10万</option>
+								<option value="10-15">10-15万</option>
+								<option value="15-20">15-20万</option>
+								<option value="20-25">20-25万</option>
+								<option value="25-30">25-30万</option>
+								<option value="30-35">30-35万</option>
+								<option value="35-40">35-40万</option>
+								<option value="40-45">40-45万</option>
+								<option value="45-50">45-50万</option>
+								<option value="50+">50万以上</option>
+							</select>
+							<p class="error_text price_error_text"></p>				
+						</div>
+						<div class="form_row input_full box_s">
+							<input class="brank_select brank_select_set_off fake_input" data="none" readonly="readonly" placeholder="点击选择品牌车型" value="">	
+							</input> 
+						</div>	
+						<div class="form_row commit_box">
+							<button class="buy_car_commit form_commit">提交</button>
+						</div>
 					</div>
-					<div class="form_row input_full">
-						<input class="phone_input" type="tel" name="phone" placeholder="请输入您的手机号" maxlength="11">
-						<p class="error_text phone_error_text"></p>
-						<i class="must_icon"></i>
-						<p class="error_text phone_error_text"></p>
-					</div>
-					<div class="form_row input_full">
-						<input class="brand_select brank_select_set_off fake_input" data="none" placeholder="点击选择品牌车型" value="" readonly="readonly">
-						</input>
-						<i class="must_icon"></i>
-						<p class="error_text brand_error_text"></p>
-					</div>
-					<div class="form_row input_full">
-						<textarea class="box_s" name="message" cols="20" rows="10" class="suggest" placeholder="留言"></textarea>
-					</div>			
-					<div class="form_row commit_box">
-						<button class="new_car_commit form_commit">提交</button>
+					<!-- 录入车源 -->
+					<div class="form_box sell_car_form">
+						<div class="form_row input_full">
+							<input class="name_input" type="text" name="userName" placeholder="请输入车主姓名">
+							<i class="must_icon"></i>
+							<p class="error_text name_error_text"></p>
+						</div>
+						<div class="form_row input_full">
+							<input class="phone_input" type="tel" name="phone" placeholder="请输入手机号码" maxlength="11">
+							<i class="must_icon"></i>
+							<p class="error_text phone_error_text"></p>
+						</div>
+						<div class="form_row input_full">
+							<input class="brand_select brank_select_set fake_input" data="none" placeholder="点击选择品牌车型" value="" readonly="readonly">	
+							</input>
+							<i class="must_icon"></i>
+							<p class="error_text brand_error_text"></p>
+						</div>	
+						<div class="form_row input_full">
+							<input class="time_input" id="picktime" type="text" name="time" placeholder="请选择上牌时间" value="" readonly="readonly">
+							<i class="must_icon"></i>
+							<p class="error_text time_error_text"></p>
+						</div>
+						<div class="form_row input_full">
+							<input class="mileage_input" type="tel" name="mileage" placeholder="请输入表显里程" maxlength="5">
+							<p class="error_text mileage_error_text"></p>
+							<i class="must_icon"></i>
+							<span class="wan">万公里</span>
+						</div>	
+						<div class="form_row commit_box">
+							<button class="sell_car_commit form_commit">提交</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -63,7 +123,6 @@
 				<div class="_success_desc">稍后会有专业客服与您联系，请保持电话畅通</div>
 				<div class="return_link">
 				 	<a href="javascript:;" class="return">返回</a>
-				 	<a href="./m.m.filter_brand.html">去看车</a>
 			 	</div>
 			</div>
 		</div>
@@ -304,6 +363,75 @@
                          </li>
                          <li class="brand_details_item">
                            <a href="javascript:void(0);">奥迪S8</a>
+                         </li>
+                    </ul>
+                </dd>
+            </dl>
+		</div>
+	</section>
+	<!-- 选择哪一款 -->
+	<section class="car_set_detail">
+		<div class="filter_head cover_head">
+			<a href="javascript:void(0);" class="icon-angle-left"></a>
+			<p>选择款式</p>
+		</div>
+		<div class="filter_brand">
+			<h2 class="_set_detail">奥迪A3</h2>
+			<dl class="filter_details_kind filter_details_brand">
+                <dt class="filter_details_tit set_detail_yeas">2015款</dt>
+                <dd class="brand_details_dd">
+                    <ul>
+                         <li class="brand_details_item">
+                            <a href="javascript:void(0);" class="set_dateil_tit">2015款 奥迪A3 Sportback 35 TFSI 手动进取版手动进取版手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                          	<a href="javascript:void(0);" class="set_dateil_tit">2015款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                           <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2015款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2015款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2015款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2015款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2015款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="filter_details_kind filter_details_brand">
+                <dt class="filter_details_tit set_kind">2016款</dt>
+                <dd class="brand_details_dd">
+                    <ul>
+                         <li class="brand_details_item">
+                            <a href="javascript:void(0);" class="set_dateil_tit">2016款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                          	<a href="javascript:void(0);" class="set_dateil_tit">2016款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                           <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2016款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2016款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2016款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2016款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2016款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2016款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
                          </li>
                     </ul>
                 </dd>

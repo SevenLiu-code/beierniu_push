@@ -2,7 +2,7 @@
 function car_brands_option(){
 		$('a.car_brands_option').tap(function(e){
 			var html = $(this).html();
-			$('input.brank_select_set_off').addClass('current').val(html);
+			$('input.brank_select_set_off').val(html);
 			$('section.car_brank, section.brank_set').hide();
 			$('div.click_mask').show();
 			$('.hidden_part').show();
@@ -35,18 +35,17 @@ function find_set_detail(){
 	});
 }	
 $(function(){
-	//select
+	//二手车买卖页select事件
 	$('select.budget_price_select, div.budget_price>i').one('tap', function(e){
 		$('select.budget_price_select>option').first().attr({'disabled':'disabled'});
 	});
 	$('select.budget_price_select').one('change', function(){
-		$('select.budget_price_select').addClass('current');
+		$('select.budget_price_select').addClass('current');//改变字体颜色
 	});
 	//车款式不可选择品牌进入
 	$('input.brank_select_set_off').tap(function(e){
 		$('.hidden_part').css({'display':'none'});
-		$('section.car_brank').css({'display':'block'});
-		$('dl.no_filter_dl').css({'display':'block'});//显示不限
+		$('section.car_brank ,dl.no_filter_dl').css({'display':'block'});//显示不限
 		$('section.car_brank a.no_brand, section.brank_set .filter_brand a').addClass('car_brands_option');
 		//不获取车款式内容添加标志类名
 		$(window).scrollTop(0);//滚动条设为0
@@ -65,7 +64,7 @@ $(function(){
 		$('section.brank_set li.brand_details_item>a').addClass('find_set_detail');
 		//添加获取车辆款式类名标志
 		find_set_detail();//绑定获取车辆款式选择确定事件
-	})
+	});
 	//品牌选择页返回
 	$('section.car_brank>.filter_head>a').on('touchend', function(e){
 		$('section.brank_set').removeClass('find_set_detail');//去掉类标志
@@ -112,7 +111,7 @@ $(function(){
 		$('section.car_set_detail').hide();
 		$('div.click_mask, .hidden_part').show();
 		var t = setTimeout(function(){
-			$('div.click_mask').hide();
+			$('div.click_mask').hide();//350毫秒后隐藏防点透遮罩
 		}, 350);
 	});
 	//录入买家页表单提交
@@ -161,7 +160,7 @@ $(function(){
 		var $box = $(this).parents('.sell_car_form');
 		var name = $box.find('input.name_input').val();//卖家姓名
 		var phone = $box.find('input.phone_input').val();//手机号码
-		var brank_select_text = $box.find('input.brand_select').val();//品牌车型
+		var brank_select = $box.find('input.brand_select').val();//品牌车型
 		var time = $box.find('input.time_input').val();
 		var mileage = $box.find('input.mileage_input').val();//表显里程
 		$box.find('p.error_text').hide();//隐藏所以错误提示文本
@@ -169,15 +168,49 @@ $(function(){
 			$box.find('p.name_error_text').html('买家姓名为必填项').show();
 		 }else if (!Rex_phone.test(phone)){
 		 	$box.find('p.phone_error_text').html('手机号码填写有误').show();
-		 }else if( brank_select_text == '' || brank_select_text.length == 0 ){
+		 }else if( brank_select == '' || brank_select.length == 0 ){
 		 	$box.find('p.brand_error_text').html('请选择品牌车型').show();
 		 }else if( time == '' || time.length == 0 ){
 		 	$box.find('p.time_error_text').html('请选择上牌时间').show();
 		 }else if( !Rex_mileage.test(mileage) ){
 		 	$box.find('p.mileage_error_text').html('表显里程输入有误').show();
 		 }else{
-		 	//取到品牌选择的data
-		 	arry.push(name, phone, brank_select_text, time, mileage);
+		 	arry.push(name, phone, brank_select, time, mileage);
+		 	$.ajax({
+				cache : true,
+				type : "POST",
+				url : "",
+				data : "",
+				async : false,
+				dataType:"json",
+				success: function(data) {
+					if(data.code==3){
+						$('div.buy_sell_form_con').hide();
+						$('div.ask_box_success').show();
+					}
+				}
+			});
+		 }
+	});
+	//购买新车页表单提交
+	$('button.new_car_commit').tap(function(){
+		var arry = [];
+		var $this = $(this);
+		var Rex_phone = /^1[34578][\d]{9}$/;
+		var $box = $(this).parents('.form_con_inner');
+		var name = $box.find('input.name_input').val();//卖家姓名
+		var phone = $box.find('input.phone_input').val();//手机号码
+		var brank_select = $box.find('input.brand_select').val();//品牌车型
+		var textarea = $box.find('textarea').val();//留言
+		$box.find('p.error_text').hide();//隐藏所以错误提示文本
+		if (name == '' || name.length == 0) { 
+			$box.find('p.name_error_text').html('买家姓名为必填项').show();
+		 }else if (!Rex_phone.test(phone)){
+		 	$box.find('p.phone_error_text').html('手机号码填写有误').show();
+		 }else if( brank_select == '' || brank_select_text.length == 0 ){
+		 	$box.find('p.brand_error_text').html('请选择品牌车型').show();
+		 }else{
+		 	arry.push(name, phone, brank_select, textarea);
 		 	$.ajax({
 				cache : true,
 				type : "POST",

@@ -29,16 +29,22 @@ function buySellEnvent(){
 				};
 		})
 	};
-
-$(function(){
-	buySellEnvent();
-	brank_letter();
-	var calendar = new LCalendar();
-    calendar.init({
+//模拟iOS时间选择
+function ios_time(){
+	if ( $('#picktime').length>0 ) {//如果有#picktime DOM，执行
+		var calendar = new LCalendar();
+    	calendar.init({
         'trigger': '#picktime', //标签id
         'type': 'ym', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
         'minDate': '1980-1', //最小日期
         'maxDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 1)
-    });
+    	});
+	}	
+}
+
+$(function(){
+	buySellEnvent();
+	brank_letter();
+	ios_time();	
 })
 
